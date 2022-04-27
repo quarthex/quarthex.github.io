@@ -1,0 +1,170 @@
+@import url("https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css")
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap")
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+
+$mobile: 768px
+$tablet: 1023px
+$fullhd: 1408px
+
+$green: #3cc600
+$blue: #009bd3
+
+$discord: #5865f2
+$twitter: #1d9bf0
+$telegram: #0c9ebf
+$retpoŝto: #ea4335
+
+html
+    background: url("pejzaĝo.png")
+    font-family: 'Jost', sans-serif
+    font-size: 16pt
+
+body
+    color: #eee
+    margin: 0 64px
+    text-shadow: #000 0 0 1px
+
+header
+    align-items: center
+    display: flex
+    font-size: 18pt
+    justify-content: space-between
+    margin-bottom: 16px
+    span
+        font-size: 32pt
+    img
+        border-radius: 29px
+        height: 58px
+        margin: 16px 16px 16px 0
+    nav ul li
+        display: inline
+        padding: 8px 12px
+        text-align: center
+        &:hover
+            border-bottom: solid 4px mix($green, $blue)
+    .nuna
+        border-radius: 8px
+        background: linear-gradient(to right, $green, $blue)
+        text-shadow: none
+        &:hover
+            border: none
+
+footer
+    text-align: center
+    font-size: 32px
+    ul
+        display: flex
+        justify-content: center
+        margin: 32px 0
+        li
+            margin: 0 16px
+            position: relative
+            a
+                transition: all .2s linear
+            a::before
+                content: '⬢'
+                position: absolute
+                font-size: 86px
+                z-index: -1
+                left: -6px
+                top: -44px
+            a i
+                color: #fff
+                width: 64px
+        li:hover
+            a i
+                transition: all .2s linear
+                text-shadow: #444 0 0 8px
+    .discord a
+        color: $discord
+        &:hover
+            color: darken($discord, 4)
+    .twitter a
+        color: $twitter
+        &:hover
+            color: darken($twitter, 4)
+    .telegram a
+        color: $telegram
+        &:hover
+            color: darken($telegram, 4)
+    .at a
+        color: $retpoŝto
+        &:hover
+            color: darken($retpoŝto, 4)
+
+a
+    text-decoration: none
+
+ul
+    list-style: none
+    padding: 0
+
+#ĉefpaĝo
+    img
+        border-radius: 8px
+        box-shadow: #222 0 16px 32px
+        float: right
+        margin: 0 0 32px 32px
+    h1
+        font-size: 48px
+        font-variant: small-caps
+        font-weight: bold
+    nav
+        clear: right
+        margin: 16px 0
+        text-align: center
+        text-indent: 0
+        ul
+            display: flex
+            flex-wrap: wrap
+        li
+            background: rgba(16, 16, 16, 0.7)
+            border-radius: 8px
+            flex: 1
+            margin: 16px
+            padding: 16px
+
+@media (max-width: $fullhd)
+    #ĉefpaĝo img
+        float: none
+        margin: 0
+        width: 100%
+
+@media (max-width: $tablet)
+    header
+        span
+            display: none
+    #ĉefpaĝo ul
+        flex-direction: column
+
+@media (max-width: $mobile)
+    body
+        margin: 0 16px
+    header
+        flex-direction: column
+        @keyframes skui
+            0%
+                left: 0
+            25%
+                left: -8px
+            75%
+                left: 8px
+            100%
+                left: 0
+        img
+            animation: .2s linear 4s 3 normal none running skui
+            position: relative
+        nav
+            display: none
+            margin-top: 16px
+            width: 100%
+        nav ul li
+            display: block
+            &:hover
+                border: none
+    header.fermita
+        nav
+            display: block
+    #ĉefpaĝo
+        img
+            display: none

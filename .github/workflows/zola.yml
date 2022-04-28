@@ -10,6 +10,6 @@ jobs:
       - name: konstrui_kaj_publikigi
         uses: shalzz/zola-deploy-action@v0.15.3
         env:
-          BUILD_FLAGS: -u https://${{ github.repository_owner }}.github.io/espera-mondo
+          BUILD_FLAGS: -u https://${{ github.repository_owner }}.github.io
           PAGES_BRANCH: gh-pages
           TOKEN: ${{ secrets.TOKEN }}

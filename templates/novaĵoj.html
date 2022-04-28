@@ -8,7 +8,7 @@
         <li>
             <a href="{{ page.path }}">
                 {% if page.extra.bildo %}
-                {% set img = resize_image(path=current_path ~ page.extra.bildo, width=256, height=256, op="fit", format="webp") %}
+                {% set img = resize_image(path=page.path ~ page.extra.bildo, width=256, height=256, op="fit", format="webp") %}
                 <img src="{{ img.url }}" alt="ilustro">
                 {% endif %}
                 <div>

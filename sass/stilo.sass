@@ -23,7 +23,7 @@ html
 body
     color: #eee
     margin: 0 64px
-    text-shadow: #000 0 0 1px
+    text-shadow: #222 0 0 2px
 
 header
     align-items: center
@@ -96,6 +96,9 @@ footer
 
 a, a:hover, strong
     color: #eee
+code
+    color: #f44
+    background: none
 
 #ĉefpaĝo
     img
@@ -116,7 +119,7 @@ a, a:hover, strong
             display: flex
             flex-wrap: wrap
         li
-            background: transparentize(#111, .3)
+            background: transparentize(#111, .5)
             border-radius: 8px
             flex: 1
             margin: 16px
@@ -125,13 +128,13 @@ a, a:hover, strong
 nav#novaĵoj
     ul li a
         align-items: center
-        background-color: transparentize(#111, .3)
+        background-color: transparentize(#111, .5)
         border-radius: 8px
         display: flex
         padding: 16px
         transition: all .2s
         &:hover
-            box-shadow: transparentize(#111, .7) 0 4px 16px
+            box-shadow: transparentize(#111, .5) 0 4px 16px
     img
         margin-right: 16px
         box-shadow: #000 0 2px 8px
@@ -143,7 +146,7 @@ nav#novaĵoj
         color: #888
 
 article#novaĵo
-    background: transparentize(#111, .7)
+    background: transparentize(#111, .5)
     padding: 16px 32px
     h1
         font-size: 2em
@@ -163,6 +166,27 @@ article#novaĵo
         display: block
         margin: 64px
         text-align: right
+
+section#regularo
+    nav 
+        ul
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+        li
+            margin-right: 16px
+    article
+        h1
+            font-size: 2em
+        p
+            margin-bottom: 16px
+        ol
+            background: transparentize(#000, .5)
+            border-radius: 8px
+            margin: 32px
+            padding: 16px
+        li
+            margin: 0 32px 16px 32px
 
 @media (max-width: $fullhd)
     #ĉefpaĝo img

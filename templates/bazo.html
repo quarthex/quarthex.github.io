@@ -22,7 +22,9 @@
                 <li{% if current_path is starting_with("/novaĵoj/") %} class="nuna"{% endif %}>
                     <a href="/novaĵoj">Novaĵoj</a>
                 </li>
-                <li>Regularo</li>
+                <li{% if current_path is starting_with("/regularo/") %} class="nuna"{% endif %}>
+                    <a href="/regularo">Regularo</a>
+                </li>
                 <li>Mapo</li>
                 <li>Ekludi</li>
             </ul>

@@ -1,7 +1,3 @@
-{% set supro = '' %}
-{% for _ in range(end=current_path | replace(from='/', to=' ') | wordcount) %}
-    {% set_global supro = '../' ~ supro %}
-{% endfor %}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 
@@ -9,25 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ supro }}stilo.css">
+    <link rel="stylesheet" href="{{ get_url(path='stilo.css') }}">
     <title>{{ config.title }}</title>
 </head>
 
 <body>
     <header>
-        <img src="{{ supro }}stelo.svg" alt="insigno">
+        <img src="{{ get_url(path='stelo.svg') }}" alt="insigno">
         <span>{{ config.title }}</span>
         <span class="is-flex-grow-1"></span>
         <nav>
             <ul>
                 <li{% if current_path == "/" %} class="nuna"{% endif %}>
-                    <a href="{{ supro }}">Ĉefpaĝo</a>
+                    <a href="{{ get_url(path='@/_index.md') }}">Ĉefpaĝo</a>
                 </li>
                 <li{% if current_path is starting_with("/novaĵoj/") %} class="nuna"{% endif %}>
-                    <a href="{{ supro }}novaĵoj">Novaĵoj</a>
+                    <a href="{{ get_url(path='@/novaĵoj/_index.md') }}">Novaĵoj</a>
                 </li>
                 <li{% if current_path is starting_with("/regularo/") %} class="nuna"{% endif %}>
-                    <a href="{{ supro }}regularo">Regularo</a>
+                    <a href="{{ get_url(path='@/regularo/_index.md') }}">Regularo</a>
                 </li>
                 <li><a href="{{ config.base_url | replace(from='https://', to='http://') }}:8123">Mapo</a></li>
                 <li>Ekludi</li>
@@ -48,7 +44,7 @@
             {% endfor %}
         </ul>
     </footer>
-    <script src="{{ supro }}menuo.js"></script>
+    <script src="{{ get_url(path='menuo.js') }}"></script>
 </body>
 
 </html>

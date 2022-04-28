@@ -1,0 +1,14 @@
+on: push
+name: Konstrui kaj publikigi la retejon
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/ĉefa'
+    steps:
+      - name: elsxuti
+        uses: actions/checkout@v2
+      - name: konstrui_kaj_publikigi
+        uses: shalzz/zola-deploy-action@v0.15.3
+        env:
+          PAGES_BRANCH: gh-pages
+          TOKEN: ${{ secrets.TOKEN }}

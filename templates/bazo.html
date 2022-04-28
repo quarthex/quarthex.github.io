@@ -1,3 +1,7 @@
+{% set supro = '' %}
+{% for _ in range(end=current_path | replace(from='/', to=' ') | wordcount) %}
+    {% set_global supro = '../' ~ supro %}
+{% endfor %}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 
@@ -5,25 +9,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/stilo.css">
+    <link rel="stylesheet" href="{{ supro }}stilo.css">
     <title>{{ config.title }}</title>
 </head>
 
 <body>
     <header>
-        <img src="/stelo.svg" alt="insigno">
+        <img src="{{ supro }}stelo.svg" alt="insigno">
         <span>{{ config.title }}</span>
         <span class="is-flex-grow-1"></span>
         <nav>
             <ul>
                 <li{% if current_path == "/" %} class="nuna"{% endif %}>
-                    <a href="/">Ĉefpaĝo</a>
+                    <a href="{{ supro }}">Ĉefpaĝo</a>
                 </li>
                 <li{% if current_path is starting_with("/novaĵoj/") %} class="nuna"{% endif %}>
-                    <a href="/novaĵoj">Novaĵoj</a>
+                    <a href="{{ supro }}novaĵoj">Novaĵoj</a>
                 </li>
                 <li{% if current_path is starting_with("/regularo/") %} class="nuna"{% endif %}>
-                    <a href="/regularo">Regularo</a>
+                    <a href="{{ supro }}regularo">Regularo</a>
                 </li>
                 <li><a href="{{ config.base_url | replace(from='https://', to='http://') }}:8123">Mapo</a></li>
                 <li>Ekludi</li>
@@ -44,7 +48,7 @@
             {% endfor %}
         </ul>
     </footer>
-    <script src="/menuo.js"></script>
+    <script src="{{ supro }}menuo.js"></script>
 </body>
 
 </html>

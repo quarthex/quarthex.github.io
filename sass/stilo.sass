@@ -13,6 +13,7 @@ $discord: #5865f2
 $twitter: #1d9bf0
 $telegram: #0c9ebf
 $retpoŝto: #ea4335
+$ligiloj: "discord" $discord, "twitter" $twitter, "telegram" $telegram, "at" $retpoŝto
 
 html
     background: url("pejzaĝo.png")
@@ -61,38 +62,35 @@ footer
         li
             margin: 0 16px
             position: relative
-            a
-                transition: all .2s linear
-            a::before
-                content: '⬢'
-                position: absolute
-                font-size: 86px
-                z-index: -1
-                left: -6px
-                top: -44px
-            a i
-                color: #fff
-                width: 64px
+            width: 64px
         li:hover
-            a i
-                transition: all .2s linear
-                text-shadow: #444 0 0 8px
-    .discord a
-        color: $discord
-        &:hover
-            color: darken($discord, 4)
-    .twitter a
-        color: $twitter
-        &:hover
-            color: darken($twitter, 4)
-    .telegram a
-        color: $telegram
-        &:hover
-            color: darken($telegram, 4)
-    .at a
-        color: $retpoŝto
-        &:hover
-            color: darken($retpoŝto, 4)
+            transition: all .2s linear
+            text-shadow: #444 0 0 8px
+    @mixin heksagono
+        content: " "
+        display: block
+        height: 37px
+        position: absolute
+        transition: all .2s linear
+        width: 64px
+    .heksagono
+        @include heksagono
+        top: 3px
+        z-index: -1
+        &::before
+            @include heksagono
+            transform: rotate(60deg)
+        &::after
+            @include heksagono
+            transform: rotate(120deg)
+
+    @each $name, $color in $ligiloj
+        .#{$name}
+            .heksagono, .heksagono::before, .heksagono::after
+                background-color: $color
+        .#{$name}:hover
+            .heksagono, .heksagono::before, .heksagono::after
+                background-color: darken($color, 4)
 
 a, a:hover, strong
     color: #eee
@@ -100,7 +98,7 @@ code
     color: #f44
     background: none
 
-#ĉefpaĝo
+section.ĉefpaĝo
     img
         border-radius: 8px
         box-shadow: #222 0 16px 32px
@@ -125,7 +123,7 @@ code
             margin: 16px
             padding: 16px
 
-nav#novaĵoj
+nav.novaĵoj
     ul li a
         align-items: center
         background-color: transparentize(#111, .5)
@@ -145,7 +143,7 @@ nav#novaĵoj
         font-size: .6em
         color: #888
 
-article#novaĵo
+.novaĵo
     background: transparentize(#111, .5)
     padding: 16px 32px
     h1
@@ -167,7 +165,7 @@ article#novaĵo
         margin: 64px
         text-align: right
 
-section#regularo
+section.regularo
     nav
         ul
             display: flex
@@ -189,20 +187,19 @@ section#regularo
             margin: 0 32px 16px 32px
 
 @media (max-width: $fullhd)
-    #ĉefpaĝo img
+    .ĉefpaĝo img
         float: none
         margin: 0
         width: 100%
-    article#novaĵo img
+    article.novaĵo img
         float: none
         margin: 0
         width: 100%
 
 @media (max-width: $tablet)
-    header
-        span
-            display: none
-    #ĉefpaĝo ul
+    header span
+        display: none
+    .ĉefpaĝo ul
         flex-direction: column
 
 @media (max-width: $mobile)
@@ -231,13 +228,11 @@ section#regularo
             margin: 0
             &:hover
                 border: none
-    header.fermita
-        nav
-            display: block
-    #ĉefpaĝo
-        img
-            display: none
-    nav#novaĵoj
+    header.fermita nav
+        display: block
+    .ĉefpaĝo img
+        display: none
+    nav.novaĵoj
         ul li a
             flex-direction: column
         img
@@ -245,13 +240,12 @@ section#regularo
             max-height: none
             max-width: none
             width: 100%
-    article#novaĵo
+    .novaĵo
         margin: 0 -16px
         padding: 16px
         img
             margin: 32px 0
 
-    section#regularo
-        article ol
-            border-radius: 0
-            margin: 32px -16px
+    section.regularo article ol
+        border-radius: 0
+        margin: 32px -16px

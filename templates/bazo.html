@@ -37,6 +37,7 @@
             {% for ligilo in config.extra.ligiloj %}
             <li class="{{ ligilo.icon | split(pat='/') | last }}">
                 <a href="{{ ligilo.url }}">
+                    <i class="heksagono"></i>
                     <i class="fa-{{ ligilo.icon | split(pat='/') | first }} fa-{{ ligilo.icon | split(pat='/' ) | last }}"
                         title="{{ ligilo.title }}"></i>
                 </a>

@@ -1,14 +1,14 @@
 {% extends "bazo.html" %}
 
 {% block enhavo %}
-    <article id="ĉefpaĝo">
-        {{ section.content | safe }}
-        <nav>
-            <ul>
-                <li>Kiel ekludi</li>
-                <li>Elŝuti mondmapon</li>
-                <li>Vidi enretan mapon</li>
-            </ul>
-        </nav>
-    </article>
+<section class="ĉefpaĝo">
+    {{ section.content | safe }}
+    <nav>
+        <ul>
+            <li>Kiel ekludi</li>
+            <li>Elŝuti mondmapon</li>
+            <li>Vidi enretan mapon</li>
+        </ul>
+    </nav>
+</section>
 {% endblock %}

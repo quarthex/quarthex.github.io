@@ -6,7 +6,7 @@ extra.auxtoro = "Ver3ndo"
 extra.bildo = "infero.jpeg"
 +++
 
-![Infero](/novaĵoj/infero.jpeg)
+![Infero](../infero.jpeg)
 
 _Notiĝu: Je la tempo de skribado, la servilo ankoraŭ uzas 1.15.2. **EsperaMondo ekuzos Minecraft 1.16 je la 1a de Julio, 2020**._
 

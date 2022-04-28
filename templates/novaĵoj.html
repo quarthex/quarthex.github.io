@@ -10,7 +10,7 @@
                 {% if page.extra.bildo %}
                 {% set img = resize_image(path=current_path ~ page.extra.bildo,
                 width=256, height=256, op="fit", format="webp") %}
-                <img src="{{ img.url }}" alt="ilustro">
+                <img src="{{ supro }}{{ img.url | replace(from=config.base_url ~ '/', to='') }}" alt="ilustro">
                 {% endif %}
                 <div>
                     <span>{{ page.title }}</span><br>

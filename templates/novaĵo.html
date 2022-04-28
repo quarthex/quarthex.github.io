@@ -1,0 +1,12 @@
+{% extends "bazo.html" %}
+{% import "dato.html" as dato %}
+
+{% block enhavo %}
+<article id="novaĵo">
+    <h1>{{ page.title }}</h1>
+    {{ page.content | safe }}
+    <small>
+        {{ dato::dato(dato=page.date) }} − {{ page.extra.auxtoro }}
+    </small>
+</article>
+{% endblock %}

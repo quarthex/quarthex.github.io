@@ -16,6 +16,7 @@ $retpoŝto: #ea4335
 
 html
     background: url("pejzaĝo.png")
+    background-attachment: fixed
     font-family: 'Jost', sans-serif
     font-size: 16pt
 
@@ -38,6 +39,7 @@ header
         margin: 16px 16px 16px 0
     nav ul li
         display: inline
+        margin-left: 8px
         padding: 8px 12px
         text-align: center
         &:hover
@@ -92,12 +94,8 @@ footer
         &:hover
             color: darken($retpoŝto, 4)
 
-a
-    text-decoration: none
-
-ul
-    list-style: none
-    padding: 0
+a, a:hover, strong
+    color: #eee
 
 #ĉefpaĝo
     img
@@ -118,14 +116,60 @@ ul
             display: flex
             flex-wrap: wrap
         li
-            background: rgba(16, 16, 16, 0.7)
+            background: transparentize(#111, .3)
             border-radius: 8px
             flex: 1
             margin: 16px
             padding: 16px
 
+nav#novaĵoj
+    ul li a
+        align-items: center
+        background-color: transparentize(#111, .3)
+        border-radius: 8px
+        display: flex
+        padding: 16px
+        transition: all .2s
+        &:hover
+            box-shadow: transparentize(#111, .7) 0 4px 16px
+    img
+        margin-right: 16px
+        box-shadow: #000 0 2px 8px
+        max-height: 128px
+        max-width: 128px
+    small
+        display: block
+        font-size: .6em
+        color: #888
+
+article#novaĵo
+    background: transparentize(#111, .7)
+    padding: 16px 32px
+    h1
+        font-size: 2em
+        margin-bottom: 32px
+    img
+        box-shadow: #000 0 4px 8px
+        float: right
+        margin: 0 0 0 64px
+    p
+        margin-bottom: 16px
+    ul
+        list-style: disc
+    li
+        margin-left: 32px
+    small
+        color: #ccc
+        display: block
+        margin: 64px
+        text-align: right
+
 @media (max-width: $fullhd)
     #ĉefpaĝo img
+        float: none
+        margin: 0
+        width: 100%
+    article#novaĵo img
         float: none
         margin: 0
         width: 100%
@@ -160,6 +204,7 @@ ul
             width: 100%
         nav ul li
             display: block
+            margin: 0
             &:hover
                 border: none
     header.fermita
@@ -168,3 +213,16 @@ ul
     #ĉefpaĝo
         img
             display: none
+    nav#novaĵoj
+        ul li a
+            flex-direction: column
+        img
+            margin: 16px
+            max-height: none
+            max-width: none
+            width: 100%
+    article#novaĵo
+        margin: 0 -16px
+        padding: 16px
+        img
+            margin: 32px 0

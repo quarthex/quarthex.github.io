@@ -1,0 +1,5 @@
+{% macro dato(dato) %}
+    {{ dato | date(format="%d") }}
+    {{ trans(key=dato | date(format="%B")) }}
+    {{ dato | date(format="%Y") }}
+{% endmacro dato %}

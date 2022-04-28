@@ -4,6 +4,20 @@ default_language = "eo"
 compile_sass = true
 minify_html = true
 
+[translations]
+January = "januaro"
+February = "februaro"
+March = "marso"
+April = "aprilo"
+May = "majo"
+June = "junio"
+July = "julio"
+August = "aŭgusto"
+September = "septembro"
+October = "oktobro"
+November = "novembro"
+December = "decembro"
+
 [[extra.ligiloj]]
 title = "Discord"
 url = "https://discord.gg/9qW8ySY"
@@ -15,7 +29,7 @@ icon = "brands/twitter"
 url = "https://twitter.com/EsperaMondo"
 
 [[extra.ligiloj]]
-title = "Telegrame"
+title = "Telegram"
 icon = "brands/telegram"
 url = "https://web.telegram.org/#/im?p=s1082104313_9694451371433130050"
 

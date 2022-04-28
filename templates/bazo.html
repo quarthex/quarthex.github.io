@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stilo.css">
+    <title>{{ config.title }}</title>
+</head>
+
+<body>
+    <header>
+        <img src="/stelo.svg" alt="insigno">
+        <span>{{ config.title }}</span>
+        <span class="is-flex-grow-1"></span>
+        <nav>
+            <ul>
+                <li{% if current_path == "/" %} class="nuna"{% endif %}>
+                    <a href="/">Ĉefpaĝo</a>
+                </li>
+                <li{% if current_path is starting_with("/novaĵoj/") %} class="nuna"{% endif %}>
+                    <a href="/novaĵoj">Novaĵoj</a>
+                </li>
+                <li>Regularo</li>
+                <li>Mapo</li>
+                <li>Ekludi</li>
+            </ul>
+        </nav>
+    </header>
+    {% block enhavo %}{% endblock %}
+    <footer>
+        EsperaMondo en aliaj platformoj:
+        <ul>
+            {% for ligilo in config.extra.ligiloj %}
+            <li class="{{ ligilo.icon | split(pat='/') | last }}">
+                <a href="{{ ligilo.url }} ">
+                    <i class="fa-{{ ligilo.icon | split(pat='/') | first }} fa-{{ ligilo.icon | split(pat='/' ) | last }}"
+                        title="{{ ligilo.title }}"></i>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </footer>
+    <script src="/menuo.js"></script>
+</body>
+
+</html>

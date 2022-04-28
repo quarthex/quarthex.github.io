@@ -83,6 +83,9 @@ footer
         &::after
             @include heksagono
             transform: rotate(120deg)
+    .heksagono.ombro, .heksagono.ombro::before, .heksagono.ombro::after
+        background-color: #222 !important
+        filter: blur(2px)
 
     @each $name, $color in $ligiloj
         .#{$name}

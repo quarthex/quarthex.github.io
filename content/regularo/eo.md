@@ -6,7 +6,7 @@ lang = "eo"
 
 # Servilaj Reguloj
 
-_EsperaMondo havas tre malmulte da reguloj: ni konfidas, ke la plejparto da ludantoj uzos komunan prudenton, tiel la servilo restos la paca parto de Esperantujo, kiu ĝi nun estas.
+_Espera-Mondon.net havas tre malmulte da reguloj: ni konfidas, ke la plejparto da ludantoj uzos komunan prudenton, tiel la servilo restos la paca parto de Esperantujo, kiu ĝi nun estas.
 Tamen, por konservi tiun pacon, ni ja havas kelkajn bazegajn regulojn por niaj ludantoj:_
 
 1.  **Uzu Esperanton tiel multe kiel eble.**
@@ -19,10 +19,10 @@ Tamen, por konservi tiun pacon, ni ja havas kelkajn bazegajn regulojn por niaj l
     Uzu komunan prudenton!
     Se oni malrespektas la regulon, oni povos esti forpelita.
 3.  **Nur invitu aliajn Esperantistojn en la servilon.**
-    Komencantoj estas ĉiam bonvenaj en EsperaMondo.
+    Komencantoj estas ĉiam bonvenaj en Espera-Mondon.net.
     Tamen, ludantoj kiuj nek parolas Esperanto, nek interesiĝas lerni ĝin ne bonvenas, kaj estos tuj forpelitaj.
     _Bonvolu ne inviti tiajn ludantojn en la servilon._
     Se oni faras tion akcidente, oni estos nur avertita; se oni daŭre malrespektas la regulon, oni estos permanente forpelita.
     (Se vi estas forpelita, vi povas apeli ĝin per kontakti la servilestron: vizitu la subajn ligilojn.)
 
-<small>EsperaMondo estas private operaciita servilo; ĉiu kaj ĉia forpelo el la servilo okazas je la sola diskreto de la servilestro.</small>
+<small>Espera-Mondon.net estas private operaciita servilo; ĉiu kaj ĉia forpelo el la servilo okazas je la sola diskreto de la servilestro.</small>

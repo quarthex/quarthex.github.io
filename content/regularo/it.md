@@ -6,7 +6,7 @@ lang = "it"
 
 # Regole del Server
 
-_EsperaMondo ha pochissime regole: ci aspettiamo che la maggior parte dei giocatori usi buon senso, così che il server rimanga il posto tranquillo che è.
+_Espera-Mondo.net ha pochissime regole: ci aspettiamo che la maggior parte dei giocatori usi buon senso, così che il server rimanga il posto tranquillo che è.
 Ad ogni modo abbiamo alcune regole basilari per i nostri giocatori:_
 
 1.  **Usare l'Esperanto il più possibile.**
@@ -17,7 +17,7 @@ Ad ogni modo abbiamo alcune regole basilari per i nostri giocatori:_
     Il moderatore può facilmete riparare a questi danni, ma sarebbe meglio se non succedesse nulla di tutto ciò.
     Usate buon senso! Se non si rispettano le regole si può essere espulsi.
 3.  **Invitare soltanto altri esperantisti sul server.**
-    I principianti sono sempre i benvenuti su EsperaMondo.
+    I principianti sono sempre i benvenuti su Espera-Mondo.net.
     I giocatori che non parlano esperanto e non hanno alcun interesse per la lingua non sono i benvenuti e perciò saranno espulsi.
     _Quindi non invitateli!_
     Se lo faceste per sbaglio ricevereste solo un iniziale avvertimento, ma se si infrangono continuamente le regole si viene espulsi per sempre.

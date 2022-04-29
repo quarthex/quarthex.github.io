@@ -6,7 +6,7 @@ lang = "nl"
 
 # Server Regels
 
-_EsperaMondo heeft niet veel regels: we hebben er vertrouwen in dat de spelers hun gezonde verstand zullen gebruiken.
+_Espera-Mondo.net heeft niet veel regels: we hebben er vertrouwen in dat de spelers hun gezonde verstand zullen gebruiken.
 Daardoor blijft de server vredig zoals Esperantujo, zoals huidig het geval is.
 Echter om de vrede te bewaken hebben wij enkele basisregels voor onze spelers:_
 
@@ -20,7 +20,7 @@ Echter om de vrede te bewaken hebben wij enkele basisregels voor onze spelers:_
     Gebruik je gezonde verstand.
     Als je deze regel breekt, kun je verbannen worden.
 3.  **Nodig alleen Esperantisten uit.**
-    Beginners zijn altijd welkom in EsperaMondo.
+    Beginners zijn altijd welkom in Espera-Mondo.net.
     Echter zijn spelers die niet Esperanto spreken en geen interesse hebben om de taal te leren niet welkom, en zullen verwijderd worden.
     _Nodig alsjeblieft geen spelers uit die geen Esperanto spreken._
     Als je dit per ongelijk doet, dan wordt je gewaarschuwd.

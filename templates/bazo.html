@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Ver3ndo">
+    <meta name="description" content="{{ config.description }}">
+    <meta name="generator" content="https://www.getzola.org/">
+    <meta name="keyword" content="esperanto, minecraft">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/stilo.css">
     <title>{{ config.title }}</title>
@@ -44,7 +48,7 @@
     </header>
     {% block enhavo %}{% endblock %}
     <footer class="footer">
-        EsperaMondo en aliaj platformoj:
+        Espera-Mondo.net en aliaj platformoj:
         <ul class="columns is-mobile is-centered">
             {% for ligilo in config.extra.ligiloj %}
             <li class="column {{ ligilo.icon | split(pat='/') | last }}">

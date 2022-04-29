@@ -2,7 +2,7 @@
 title = "Bonvenon"
 +++
 
-![Aperejo](aperejo.png)
+![Aperejo](aperejo.webp)
 
 # Bonvenon al EsperaMondo!
 

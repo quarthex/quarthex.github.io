@@ -11,7 +11,7 @@
                     <div class="card-image">
                         <figure class="image is-4x3">
                             {% if page.extra.bildo %}
-                            {% set img = resize_image(path=page.path ~ page.extra.bildo, width=1280, height=960, op="fill", format="webp") %}
+                            {% set img = resize_image(path=page.path ~ page.extra.bildo, width=400, height=300, op="fill", format="webp") %}
                             <img src="{{ img.url }}" alt="ilustro">
                             {% endif %}
                         </figure>

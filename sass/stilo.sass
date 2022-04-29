@@ -15,15 +15,30 @@ $text-strong: $white
 $code-background: transparent
 $link: $white-ter
 $link-hover: $white
+// box
 $box-background-color: transparentize($black, .5)
 $box-link-hover-shadow: $black-ter 0 2px 8px
+// card
 $card-content-background-color: $box-background-color
 $card-shadow: $box-link-hover-shadow
 $card-radius: .5rem
+// navbar
 $navbar-item-img-max-height: 4rem
 $navbar-tab-hover-border-bottom-color: mix($green, $blue)
 $navbar-tab-active-border-bottom-style: none
-@import "../vendor/bulma/bulma"
+@import "../vendor/bulma/sass/utilities/_all"
+@import "../vendor/bulma/sass/base/_all"
+@import "../vendor/bulma/sass/components/card"
+@import "../vendor/bulma/sass/components/navbar"
+@import "../vendor/bulma/sass/elements/box"
+@import "../vendor/bulma/sass/elements/content"
+@import "../vendor/bulma/sass/elements/icon"
+@import "../vendor/bulma/sass/elements/image"
+@import "../vendor/bulma/sass/elements/other"
+@import "../vendor/bulma/sass/grid/columns"
+@import "../vendor/bulma/sass/helpers/float"
+@import "../vendor/bulma/sass/layout/footer"
+@import "../vendor/bulma/sass/layout/section"
 a.box
     transition: box-shadow .2s $easing
 
@@ -34,7 +49,7 @@ $retpoŝto: #ea4335
 $ligiloj: "discord" $discord, "twitter" $twitter, "telegram" $telegram, "at" $retpoŝto
 
 html
-    background: url("pejzaĝo.png") fixed
+    background: url("pejzaĝo.webp") fixed
     height: 100%
     text-shadow: #222 0 0 2px
 

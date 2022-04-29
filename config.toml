@@ -18,6 +18,9 @@ October = "oktobro"
 November = "novembro"
 December = "decembro"
 
+[extra]
+mapo = "http://espera-mondo.net:8123"
+
 [[extra.ligiloj]]
 title = "Discord"
 url = "https://discord.gg/9qW8ySY"

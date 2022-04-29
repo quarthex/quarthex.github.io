@@ -11,8 +11,10 @@
 
 <body>
     <header>
-        <img src="{{ get_url(path='stelo.svg') }}" alt="insigno">
-        <span>{{ config.title }}</span>
+        <span class="brulmarko">
+            <img src="{{ get_url(path='stelo.svg') }}" alt="insigno">
+            {{ config.title }}
+        </span>
         <span class="is-flex-grow-1"></span>
         <nav>
             <ul>

@@ -1,13 +1,20 @@
-@import url("https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css")
+// tiparo
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap")
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
 
-$mobile: 768px
-$tablet: 1023px
-$fullhd: 1408px
-
+// bulma
+@import "../vendor/bulma/sass/utilities/initial-variables.sass"
 $green: #3cc600
 $blue: #009bd3
+$family-sans-serif: 'Jost', sans-serif
+$body-font-size: 16pt
+$background: $black-ter
+$text: $white-ter
+$text-strong: $white
+$link: $white-ter
+$link-hover: $white
+$code-background: transparentize($background, .7)
+@import "../vendor/bulma/bulma"
 
 $discord: #5865f2
 $twitter: #1d9bf0
@@ -16,62 +23,97 @@ $retpoŝto: #ea4335
 $ligiloj: "discord" $discord, "twitter" $twitter, "telegram" $telegram, "at" $retpoŝto
 
 html
-    background: url("pejzaĝo.png")
-    background-attachment: fixed
+    background: url("pejzaĝo.png") fixed
 
 body
-    color: #eee
-    font-family: 'Jost', sans-serif
-    font-size: 16pt
-    margin: 0 64px
+    margin: 0 $gap
+    @include mobile
+        margin: 0 $gap/2
     text-shadow: #222 0 0 2px
 
 header
     align-items: center
     display: flex
-    font-size: 18pt
+    font-size: $size-4
     justify-content: space-between
-    margin-bottom: 16px
-    span
-        font-size: 32pt
-    img
-        border-radius: 29px
-        height: 58px
-        margin: 16px 16px 16px 0
+    margin-bottom: $gap
+    @include touch
+        flex-direction: column
+        &.malfermita nav
+            display: block
+    @include mobile
+        margin-bottom: $gap/2
+    .brulmarko
+        display: flex
+        font-size: $size-2
+        padding: $gap/2 0
+        img
+            height: 4rem
+            margin-right: $gap/2
+            position: relative
+            @include mobile
+                @keyframes skui
+                    0%
+                        top: 0
+                    25%
+                        top: -8px
+                    75%
+                        top: 8px
+                    100%
+                        top: 0
+                animation: .2s $easing 2s 3 normal none running skui
+    @include mobile
+        nav
+            display: none
+            width: 100%
     nav ul li
         display: inline
-        margin-left: 8px
         padding: 8px 12px
         text-align: center
-        &:hover
-            border-bottom: solid 4px mix($green, $blue)
+        @include mobile
+            display: block
+        @include tablet
+            margin-left: 8px
+            &:hover
+                border-bottom: solid 4px mix($green, $blue)
     .nuna
-        border-radius: 8px
+        border-radius: $radius
         background: linear-gradient(to right, $green, $blue)
         text-shadow: none
         &:hover
             border: none
 
+h1
+    font-size: $size-1
+    font-variant: small-caps
+    font-weight: $weight-bold
+    margin-bottom: $gap
+
+p
+    margin-bottom: $gap*.6
+
 footer
     text-align: center
-    font-size: 32px
+    font-size: $size-3
     ul
         display: flex
         justify-content: center
-        margin: 32px 0
-        li
-            margin: 0 16px
-            position: relative
-            width: 64px
-        li:hover
-            transition: all .2s linear
-            text-shadow: #444 0 0 8px
+        margin: $gap 0
+    li
+        margin: 0 $gap/2
+        position: relative
+        width: 64px
+        @include mobile
+            margin: 0 8px
+    li:hover
+        transition: all .2s $easing
+        text-shadow: #444 0 0 8px
     @mixin heksagono
         content: " "
         display: block
         height: 37px
         position: absolute
-        transition: all .2s linear
+        transition: all .2s $easing
         width: 64px
     .heksagono
         @include heksagono
@@ -95,162 +137,102 @@ footer
             .heksagono, .heksagono::before, .heksagono::after
                 background-color: darken($color, 4)
 
-a, a:hover, strong
-    color: #eee
-code
-    color: #f44
-    background: none
-
 section.ĉefpaĝo
     img
-        border-radius: 8px
+        border-radius: $radius
         box-shadow: #222 0 16px 32px
-        float: right
-        margin: 0 0 32px 32px
-    h1
-        font-size: 48px
-        font-variant: small-caps
-        font-weight: bold
+        width: 100%
+        @include mobile
+            display: none
+        @include widescreen
+            float: right
+            margin: 0 0 $gap $gap
+            width: 50%
     nav
         clear: right
-        margin: 16px 0
         text-align: center
         text-indent: 0
         ul
             display: flex
+            flex-direction: column
             flex-wrap: wrap
+            @include tablet
+                flex-direction: row
         li
-            background: transparentize(#111, .5)
-            border-radius: 8px
+            background: transparentize($background, .5)
+            border-radius: $radius
             flex: 1
-            margin: 16px
-            padding: 16px
+            margin: $gap/2
+            padding: $gap/2
 
 nav.novaĵoj
     ul li a
         align-items: center
-        background-color: transparentize(#111, .5)
-        border-radius: 8px
+        background-color: transparentize($background, .5)
+        border-radius: $radius
         display: flex
-        padding: 16px
+        padding: $gap/2
         transition: all .2s
         &:hover
-            box-shadow: transparentize(#111, .5) 0 4px 16px
+            box-shadow: transparentize($background, .5) 0 4px 16px
+        @include mobile
+            flex-direction: column
     img
-        margin-right: 16px
+        margin-right: $gap/2
         box-shadow: #000 0 2px 8px
-        max-height: 128px
-        max-width: 128px
+        @include mobile
+            margin: $gap/2
+            width: 100%
+        @include tablet
+            max-height: 128px
+            max-width: 128px
     small
         display: block
-        font-size: .6em
-        color: #888
+        color: $grey
 
 .novaĵo
-    background: transparentize(#111, .5)
-    padding: 16px 32px
-    h1
-        font-size: 2em
-        margin-bottom: 32px
+    background: transparentize($background, .5)
+    padding: $gap/2 $gap
+    text-align: justify
+    @include mobile
+        margin: 0 -$gap
+        padding: $gap/2
     img
         box-shadow: #000 0 4px 8px
-        float: right
-        margin: 0 0 0 64px
-    p
-        margin-bottom: 16px
+        width: 100%
+        @include mobile
+            margin: $gap 0
+        @include tablet
+            float: right
+            margin-left: $gap
+            max-width: 50%
+            width: auto
     ul
         list-style: disc
     li
-        margin-left: 32px
+        margin-left: $gap
     small
-        color: #ccc
         display: block
-        margin: 64px
+        margin: $gap*2 0 $gap
         text-align: right
 
 section.regularo
+    text-align: justify
     nav
         ul
             display: flex
             flex-direction: row
             flex-wrap: wrap
+            justify-content: center
         li
-            margin-right: 16px
+            margin-right: $gap/2
     article
-        h1
-            font-size: 2em
-        p
-            margin-bottom: 16px
         ol
-            background: transparentize(#000, .5)
-            border-radius: 8px
-            margin: 32px
-            padding: 16px
+            background: transparentize($background, .5)
+            padding: $gap/2
+            margin: $gap (-$gap/2)
+            @include tablet
+                border-radius: $radius
+                margin: $gap
         li
-            margin: 0 32px 16px 32px
-
-@media (max-width: $fullhd)
-    .ĉefpaĝo img
-        float: none
-        margin: 0
-        width: 100%
-    article.novaĵo img
-        float: none
-        margin: 0
-        width: 100%
-
-@media (max-width: $tablet)
-    header span
-        display: none
-    .ĉefpaĝo ul
-        flex-direction: column
-
-@media (max-width: $mobile)
-    body
-        margin: 0 16px
-    header
-        flex-direction: column
-        @keyframes skui
-            0%
-                left: 0
-            25%
-                left: -8px
-            75%
-                left: 8px
-            100%
-                left: 0
-        img
-            animation: .2s linear 2s 3 normal none running skui
-            position: relative
-        nav
-            display: none
-            margin-top: 16px
-            width: 100%
-        nav ul li
-            display: block
-            margin: 0
-            &:hover
-                border: none
-    header.fermita nav
-        display: block
-    footer ul li
-        margin: 0 8px
-    .ĉefpaĝo img
-        display: none
-    nav.novaĵoj
-        ul li a
-            flex-direction: column
-        img
-            margin: 16px
-            max-height: none
-            max-width: none
-            width: 100%
-    .novaĵo
-        margin: 0 -16px
-        padding: 16px
-        img
-            margin: 32px 0
-
-    section.regularo article ol
-        border-radius: 0
-        margin: 32px -16px
+            margin: 0 $gap $gap/2 $gap

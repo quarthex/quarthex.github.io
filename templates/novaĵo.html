@@ -2,11 +2,13 @@
 {% import "dato.html" as dato %}
 
 {% block enhavo %}
-<article class="novaĵo">
-    <h1>{{ page.title }}</h1>
-    {{ page.content | safe }}
-    <small>
-        {{ dato::dato(dato=page.date) }} − {{ page.extra.auxtoro }}
-    </small>
-</article>
+<section class="section novaĵo">
+    <article class="content">
+        <h1 class="title is-1">{{ page.title }}</h1>
+        {{ page.content | safe }}
+        <p class="malsupra">
+            {{ dato::dato(dato=page.date) }} − {{ page.extra.auxtoro }}
+        </p>
+    </article>
+</section>
 {% endblock %}

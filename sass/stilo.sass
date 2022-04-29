@@ -8,13 +8,24 @@ $green: #3cc600
 $blue: #009bd3
 $family-sans-serif: 'Jost', sans-serif
 $body-font-size: 16pt
-$background: $black-ter
+$scheme-main: transparent
+$scheme-main-bis: transparent
 $text: $white-ter
 $text-strong: $white
+$code-background: transparent
 $link: $white-ter
 $link-hover: $white
-$code-background: transparentize($background, .7)
+$box-background-color: transparentize($black, .5)
+$box-link-hover-shadow: $black-ter 0 2px 8px
+$card-content-background-color: $box-background-color
+$card-shadow: $box-link-hover-shadow
+$card-radius: .5rem
+$navbar-item-img-max-height: 4rem
+$navbar-tab-hover-border-bottom-color: mix($green, $blue)
+$navbar-tab-active-border-bottom-style: none
 @import "../vendor/bulma/bulma"
+a.box
+    transition: box-shadow .2s $easing
 
 $discord: #5865f2
 $twitter: #1d9bf0
@@ -24,120 +35,93 @@ $ligiloj: "discord" $discord, "twitter" $twitter, "telegram" $telegram, "at" $re
 
 html
     background: url("pejzaĝo.png") fixed
-
-body
-    margin: 0 $gap
-    @include mobile
-        margin: 0 $gap/2
+    height: 100%
     text-shadow: #222 0 0 2px
 
 header
-    align-items: center
-    display: flex
-    font-size: $size-4
-    justify-content: space-between
-    margin-bottom: $gap
-    @include touch
-        flex-direction: column
-        &.malfermita nav
-            display: block
-    @include mobile
-        margin-bottom: $gap/2
-    .brulmarko
-        display: flex
-        font-size: $size-2
-        padding: $gap/2 0
-        img
-            height: 4rem
-            margin-right: $gap/2
-            position: relative
+    nav.navbar
+        font-size: $size-4
+        .navbar-brand
+            font-size: $size-2
             @include mobile
-                @keyframes skui
-                    0%
-                        top: 0
-                    25%
-                        top: -8px
-                    75%
-                        top: 8px
-                    100%
-                        top: 0
-                animation: .2s $easing 2s 3 normal none running skui
-    @include mobile
-        nav
-            display: none
-            width: 100%
-    nav ul li
-        display: inline
-        padding: 8px 12px
-        text-align: center
-        @include mobile
-            display: block
-        @include tablet
-            margin-left: 8px
-            &:hover
-                border-bottom: solid 4px mix($green, $blue)
-    .nuna
-        border-radius: $radius
-        background: linear-gradient(to right, $green, $blue)
-        text-shadow: none
-        &:hover
-            border: none
+                font-size: $size-3
+        img
+            margin-right: $gap/2
+            @include mobile
+                margin-right: $gap/3
+                max-height: 3rem
+        .navbar-menu>.navbar-end
+            padding: 1rem 0
+            .navbar-item.is-tab
+                border-bottom-width: 4px
+                @include touch
+                    border-bottom-width: 0
+                @include desktop
+                    margin: 0 2px
+            .navbar-item.is-tab.is-active
+                background: linear-gradient(to right, $green, $blue)
+                border-radius: $radius
 
 h1
-    font-size: $size-1
     font-variant: small-caps
-    font-weight: $weight-bold
-    margin-bottom: $gap
-
-p
-    margin-bottom: $gap*.6
 
 footer
     text-align: center
     font-size: $size-3
-    ul
-        display: flex
-        justify-content: center
+    ul.columns
         margin: $gap 0
-    li
-        margin: 0 $gap/2
-        position: relative
-        width: 64px
-        @include mobile
-            margin: 0 8px
-    li:hover
-        transition: all .2s $easing
-        text-shadow: #444 0 0 8px
-    @mixin heksagono
-        content: " "
-        display: block
-        height: 37px
-        position: absolute
-        transition: all .2s $easing
-        width: 64px
-    .heksagono
-        @include heksagono
-        top: 3px
-        z-index: -1
-        &::before
-            @include heksagono
-            transform: rotate(60deg)
-        &::after
-            @include heksagono
-            transform: rotate(120deg)
-    .heksagono.ombro, .heksagono.ombro::before, .heksagono.ombro::after
-        background-color: #222 !important
-        filter: blur(2px)
+        li.column
+            min-width: 64px
+            max-width: 64px
+            height: 64px
+            margin: 0 $gap/2
+            padding: 0
+            position: relative
+            @include mobile
+                margin: 0 8px
+            a
+                i
+                    position: absolute
+                %heksagono
+                    content: " "
+                    display: block
+                    height: 37px
+                    position: absolute
+                    transition: all .2s $easing
+                    width: 64px
+                i.heksagono
+                    @extend %heksagono
+                    top: 3px
+                    &::before
+                        @extend %heksagono
+                        transform: rotate(60deg)
+                    &::after
+                        @extend %heksagono
+                        transform: rotate(120deg)
+                i.heksagono.ombro, i.heksagono.ombro::before, i.heksagono.ombro::after
+                    background-color: #222 !important
+                    filter: blur(2px)
+                i.icon
+                    left: 20px
+                    top: 10px
+            &:hover
+                text-shadow: #444 0 0 8px
+                top: -2px
+                a
+                    i.heksagono.ombro, i.heksagono.ombro::before, i.heksagono.ombro::after
+                        filter: blur(4px)
+                        top: 5px
 
-    @each $name, $color in $ligiloj
-        .#{$name}
-            .heksagono, .heksagono::before, .heksagono::after
-                background-color: $color
-        .#{$name}:hover
-            .heksagono, .heksagono::before, .heksagono::after
-                background-color: darken($color, 4)
 
-section.ĉefpaĝo
+        @each $name, $color in $ligiloj
+            li.#{$name}>a
+                i.heksagono, i.heksagono::before, i.heksagono::after
+                    background-color: $color
+            li.#{$name}:hover>a
+                i.heksagono, i.heksagono::before, i.heksagono::after
+                    background-color: darken($color, 4)
+
+.ĉefpaĝo
     img
         border-radius: $radius
         box-shadow: #222 0 16px 32px
@@ -148,91 +132,37 @@ section.ĉefpaĝo
             float: right
             margin: 0 0 $gap $gap
             width: 50%
-    nav
-        clear: right
-        text-align: center
-        text-indent: 0
-        ul
-            display: flex
-            flex-direction: column
-            flex-wrap: wrap
-            @include tablet
-                flex-direction: row
-        li
-            background: transparentize($background, .5)
-            border-radius: $radius
-            flex: 1
-            margin: $gap/2
-            padding: $gap/2
 
-nav.novaĵoj
-    ul li a
-        align-items: center
-        background-color: transparentize($background, .5)
-        border-radius: $radius
-        display: flex
-        padding: $gap/2
-        transition: all .2s
-        &:hover
-            box-shadow: transparentize($background, .5) 0 4px 16px
-        @include mobile
-            flex-direction: column
-    img
-        margin-right: $gap/2
-        box-shadow: #000 0 2px 8px
-        @include mobile
-            margin: $gap/2
-            width: 100%
-        @include tablet
-            max-height: 128px
-            max-width: 128px
-    small
-        display: block
-        color: $grey
+.novaĵoj
+    ul.columns>li.column
+        max-width: 400px
+        &>a.card
+            display: block
+            transition: all .2s $easing
+            &:hover
+                box-shadow: $black-ter 0 4px 16px
 
 .novaĵo
-    background: transparentize($background, .5)
-    padding: $gap/2 $gap
-    text-align: justify
-    @include mobile
-        margin: 0 -$gap
-        padding: $gap/2
-    img
-        box-shadow: #000 0 4px 8px
-        width: 100%
-        @include mobile
-            margin: $gap 0
-        @include tablet
-            float: right
-            margin-left: $gap
-            max-width: 50%
-            width: auto
-    ul
-        list-style: disc
-    li
-        margin-left: $gap
-    small
-        display: block
-        margin: $gap*2 0 $gap
-        text-align: right
-
-section.regularo
-    text-align: justify
-    nav
-        ul
-            display: flex
-            flex-direction: row
-            flex-wrap: wrap
-            justify-content: center
-        li
-            margin-right: $gap/2
-    article
-        ol
-            background: transparentize($background, .5)
-            padding: $gap/2
-            margin: $gap (-$gap/2)
+    .content
+        text-align: justify
+        img
+            box-shadow: $black-ter 0 2px 8px
             @include tablet
-                border-radius: $radius
-                margin: $gap
-        li
-            margin: 0 $gap $gap/2 $gap
+                float: right
+                margin-left: $gap
+                max-width: 50%
+        .malsupra
+            text-align: right
+            margin: $gap
+
+.regularo
+    article.content
+        text-align: justify
+        ol
+            background: $box-background-color
+            margin: 0
+            padding: 1em 1em 1em 2em
+            @include mobile
+                margin: 0 -1rem
+            @include desktop
+                margin: 0 2rem

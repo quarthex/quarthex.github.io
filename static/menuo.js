@@ -1,11 +1,8 @@
 (() => {
-    const header = document.querySelector("header")
-    const img = document.querySelector("header img")
-    img.addEventListener("click", () => {
-        if (header.getAttribute("class") === "fermita") {
-            header.removeAttribute("class")
-        } else {
-            header.setAttribute("class", "fermita")
-        }
-    })
+    const burger = document.querySelector('.navbar-burger')
+    const target = document.getElementById(burger.dataset.target)
+    burger.onclick = function () {
+        burger.classList.toggle('is-active')
+        target.classList.toggle('is-active')
+    }
 })()

@@ -1,13 +1,15 @@
 {% extends "bazo.html" %}
 
 {% block enhavo %}
-<section class="ĉefpaĝo">
-    {{ section.content | safe }}
+<section class="section ĉefpaĝo">
+    <article class="content is-clearfix">
+        {{ section.content | safe }}
+    </article>
     <nav>
-        <ul>
-            <li>Kiel ekludi</li>
-            <li>Elŝuti mondmapon</li>
-            <li>Vidi enretan mapon</li>
+        <ul class="columns">
+            <li class="column"><a class="box">Kiel ekludi</a></li>
+            <li class="column"><a class="box">Elŝuti mondmapon</a></li>
+            <li class="column"><a class="box">Vidi enretan mapon</a></li>
         </ul>
     </nav>
 </section>

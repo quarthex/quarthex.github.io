@@ -1,22 +1,22 @@
 {% extends "bazo.html" %}
 
 {% block enhavo %}
-<section class="regularo">
+<section class="section regularo">
     {% if section is defined %}
         {% set page = get_page(path="regularo/eo.md") %}
     {% else %}
         {% set section = get_section(path=page.ancestors | last) %}
     {% endif %}
-    <nav>
-        <ul>
+    <nav class="block">
+        <ul class="columns is-mobile is-multiline">
             {% for page in section.pages %}
-            <li>
+            <li class="column is-narrow">
                 <a href="{{ page.path }}">{{ page.title }}</a>
             </li>
             {% endfor %}
         </ul>
     </nav>
-    <article>
+    <article class="content">
         {{ page.content | safe }}
     </article>
 </section>

@@ -2,7 +2,7 @@
 title = "Bonvenon"
 +++
 
-![Aperejo](aperejo.webp)
+![Aperejo](/ekludi/aperejo.webp)
 
 # Bonvenon al Espera-Mondo.net!
 

@@ -28,20 +28,14 @@
             </div>
             <div id="menuo" class="navbar-menu">
                 <div class="navbar-end">
-                    <a class="navbar-item is-tab{% if current_path == '/' %} is-active{% endif %}"
-                        href="/">
-                        Ĉefpaĝo
-                    </a>
+                    <a class="navbar-item is-tab{% if current_path == '/' %} is-active{% endif %}" href="/">Ĉefpaĝo</a>
                     <a class="navbar-item is-tab{% if current_path is starting_with('/novaĵoj/') %} is-active{% endif %}"
-                        href="/novaĵoj">
-                        Novaĵoj
-                    </a>
+                        href="/novaĵoj">Novaĵoj</a>
                     <a class="navbar-item is-tab{% if current_path is starting_with('/regularo/') %} is-active{% endif %}"
-                        href="/regularo">
-                        Regularo
-                    </a>
+                        href="/regularo">Regularo</a>
                     <a class="navbar-item is-tab" href="{{ config.extra.mapo }}">Mapo</a>
-                    <a class="navbar-item is-tab">Ekludi</a>
+                    <a class="navbar-item is-tab{% if current_path == '/ekludi/' %} is-active{% endif %}"
+                        href="/ekludi">Ekludi</a>
                 </div>
             </div>
         </nav>
@@ -56,7 +50,7 @@
                     <i class="heksagono ombro"></i>
                     <i class="heksagono"></i>
                     <i class="icon fa-{{ ligilo.icon | split(pat='/') | first }} fa-{{ ligilo.icon | split(pat='/' ) | last }}"
-                    title="{{ ligilo.title }}"></i>
+                        title="{{ ligilo.title }}"></i>
                 </a>
             </li>
             {% endfor %}

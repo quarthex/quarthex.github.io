@@ -1,5 +1,10 @@
 // tiparo
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap")
+@font-face
+    font-family: MinecraftiaEO
+    font-style: normal
+    font-weight: 500
+    src: url(MinecraftiaEO.ttf) format("truetype")
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
 
 // bulma
@@ -12,6 +17,7 @@ $scheme-main: transparent
 $scheme-main-bis: transparent
 $text: $white-ter
 $text-strong: $white
+$code: $red
 $code-background: transparent
 $link: $white-ter
 $link-hover: $white
@@ -31,6 +37,7 @@ $navbar-tab-active-border-bottom-style: none
 @import "../vendor/bulma/sass/components/card"
 @import "../vendor/bulma/sass/components/navbar"
 @import "../vendor/bulma/sass/elements/box"
+@import "../vendor/bulma/sass/elements/container"
 @import "../vendor/bulma/sass/elements/content"
 @import "../vendor/bulma/sass/elements/icon"
 @import "../vendor/bulma/sass/elements/image"
@@ -79,7 +86,7 @@ header
                 background: linear-gradient(to right, $green, $blue)
                 border-radius: $radius
 
-h1
+h1,h2
     font-variant: small-caps
 
 footer
@@ -183,3 +190,32 @@ footer
                 margin: 0 -1rem
             @include desktop
                 margin: 0 2rem
+
+.ekludi>article.content
+    &>div.grava-informo, &>div.kontrollisto
+        @extend %block
+        border-radius: $radius-large
+        padding: $gap
+    &>div.grava-informo
+        background-color: transparentize(darken($danger, 50%), .5)
+    &>div.kontrollisto
+        background-color: transparentize(darken($info, 50%), .5)
+    &>hr
+        background: linear-gradient(to right, $green, $blue)
+        opacity: .8
+    a
+        color: mix($green, $blue)
+        transition: text-shadow .2s $easing
+        &:hover
+            text-shadow: transparentize($white-ter, .8) 0 1px 4px
+    img
+        box-shadow: $black-ter 0 2px 8px
+        display: block
+        margin: auto
+    btn
+        background: transparentize($grey, .2)
+        border: outset 2pt $grey
+        border-radius: $radius
+        padding: 4px 8px
+    btn,code
+        font: .7em MinecraftiaEO

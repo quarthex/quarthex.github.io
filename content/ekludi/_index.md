@@ -28,7 +28,7 @@ Antaŭ ludi en Espera-Mondo.net, bonvolu kontroli la sekvajn aferojn:
 -   [Legu la servilajn regulojn](/regularo). **Se vi ankoraŭ ne faris tion, faru nun**.
     La regularo estis tradukita en 6 lingvojn; ŝance vi trovos la regulojn en via denaska lingvo kaj en Esperanto.
 -   Kontrolu ke vi uzas la ĝustan version de Minecraft (1.16.5).
--   Por pli Esperantuma sperto, estas rekomendata ŝanĝi vian ludlingvon al Esperanto dum vi ludas ĉe Espera-Mondo.net. Por ŝanĝi la ludlingvon, iri al <btn>Agordoj…</btn> → <btn>Lingvoj</btn> kaj elekti Esperanto (Esperantujo).
+-   Por pli Esperantuma sperto, estas rekomendata ŝanĝi vian ludlingvon al Esperanto dum vi ludas ĉe Espera-Mondo.net. Por ŝanĝi la ludlingvon, iri al <x-btn>Agordoj…</x-btn> → <x-btn>Lingvoj</x-btn> kaj elekti Esperanto (Esperantujo).
 -   Se vi havas malrapidan komputilon, estas rekomendata instali OptiFine antaŭ ludi. OptiFine estas modifikaĵo, kiu ege plirapidigas vian Minecraft klienton. 
 
 </div>
@@ -37,17 +37,17 @@ Antaŭ ludi en Espera-Mondo.net, bonvolu kontroli la sekvajn aferojn:
 
 ## 🚀 Ensaluti la unuan fojon
 
-1.  Malfermu Minecraft, kaj alklaku <btn>Pluraj ludantoj</btn>.
+1.  Malfermu Minecraft, kaj alklaku <x-btn>Pluraj ludantoj</x-btn>.
     Se vi ankoraŭ ne havas Minecraft, vi povas aĉeti ĝin [ĉi tie](https://www.minecraft.net/en-us/get-minecraft).
     <span class="is-uppercase">Certiĝu ke vi uzas la ĝustan version de Minecraft (1.16.5)!</span>
 
     {{ resize_image(path="@/ekludi/malfermita-Minecraft.png", width=800, op="fit_width", format="webp", alt="Malfermita Minecraft") }}
 
-2.  Alklaku <btn>Aldoni servilon</btn>.
+2.  Alklaku <x-btn>Aldoni servilon</x-btn>.
 
     {{ resize_image(path="@/ekludi/aldoni-servilon.png", width=800, op="fit_width", format="webp", alt="Aldoni servilon") }}
 
-3.  Tajpu la servilajn informojn en la tekstujoj, kaj aklaku <btn>Prete</btn>:  
+3.  Tajpu la servilajn informojn en la tekstujoj, kaj aklaku <x-btn>Prete</x-btn>:  
     Servila nomo: `Espera Mondo`  
     Servila adreso: `espera-mondo.net`
 

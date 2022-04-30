@@ -179,19 +179,18 @@ nav.ĉefpaĝo>ul>li
         text-align: right
         margin: $gap
 
-.regularo
-    article.content
-        text-align: justify
-        ol
-            background: $box-background-color
-            margin: 0
-            padding: 1em 1em 1em 2em
-            @include mobile
-                margin: 0 -1rem
-            @include desktop
-                margin: 0 2rem
+.regularo>.content
+    text-align: justify
+    ol
+        background: $box-background-color
+        margin: 0
+        padding: 1em 1em 1em 2em
+        @include mobile
+            margin: 0 -1rem
+        @include desktop
+            margin: 0 2rem
 
-.ekludi>article.content
+.ekludi>.content
     &>div.grava-informo, &>div.kontrollisto
         @extend %block
         border-radius: $radius-large
@@ -212,10 +211,10 @@ nav.ĉefpaĝo>ul>li
         box-shadow: $black-ter 0 2px 8px
         display: block
         margin: auto
-    btn
+    x-btn
         background: transparentize($grey, .2)
         border: outset 2pt $grey
         border-radius: $radius
         padding: 4px 8px
-    btn,code
+    x-btn,code
         font: .7em MinecraftiaEO

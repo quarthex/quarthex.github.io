@@ -145,7 +145,7 @@ footer
                 i.heksagono, i.heksagono::before, i.heksagono::after
                     background-color: darken($color, 4)
 
-.ĉefpaĝo
+section.ĉefpaĝo
     img
         border-radius: $radius
         box-shadow: #222 0 16px 32px
@@ -156,28 +156,28 @@ footer
             float: right
             margin: 0 0 $gap $gap
             width: 50%
+nav.ĉefpaĝo>ul>li
+    text-align: center
 
-.novaĵoj
-    ul.columns>li.column
-        max-width: 400px
-        &>a.card
-            display: block
-            transition: all .2s $easing
-            &:hover
-                box-shadow: $black-ter 0 4px 16px
+.novaĵoj>ul>li
+    max-width: 400px
+    &>a.card
+        display: block
+        transition: all .2s $easing
+        &:hover
+            box-shadow: $black-ter 0 4px 16px
 
-.novaĵo
-    .content
-        text-align: justify
-        img
-            box-shadow: $black-ter 0 2px 8px
-            @include tablet
-                float: right
-                margin-left: $gap
-                max-width: 50%
-        .malsupra
-            text-align: right
-            margin: $gap
+.novaĵo>.content
+    text-align: justify
+    img
+        box-shadow: $black-ter 0 2px 8px
+        @include tablet
+            float: right
+            margin-left: $gap
+            max-width: 50%
+    &>p.malsupra
+        text-align: right
+        margin: $gap
 
 .regularo
     article.content

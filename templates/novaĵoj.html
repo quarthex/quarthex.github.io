@@ -2,32 +2,30 @@
 {% import "dato.html" as dato %}
 
 {% block enhavo %}
-<section class="section">
-    <nav class="novaĵoj">
-        <ul class="columns">
-            {% for page in section.pages %}
-            <li class="column">
-                <a class="card" href="{{ page.path }}">
-                    <div class="card-image">
-                        <figure class="image is-4x3">
-                            {% if page.extra.bildo %}
-                            {% set img = resize_image(path=page.path ~ page.extra.bildo, width=400, height=300, op="fill", format="webp") %}
-                            <img src="{{ img.url }}" alt="ilustro">
-                            {% endif %}
-                        </figure>
+<nav class="section novaĵoj">
+    <ul class="columns">
+        {% for page in section.pages %}
+        <li class="column">
+            <a class="card" href="{{ page.path }}">
+                <div class="card-image">
+                    <figure class="image is-4x3">
+                        {% if page.extra.bildo %}
+                        {% set img = resize_image(path=page.path ~ page.extra.bildo, width=400, height=300, op="fill", format="webp") %}
+                        <img src="{{ img.url }}" alt="ilustro">
+                        {% endif %}
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <span class="title is-4">{{ page.title }}</span><br>
+                        <span class="subtitle is-6">
+                            <time datetime="{{ page.date }}">{{ dato::dato(dato=page.date) }}</time> − {{ page.extra.auxtoro }}
+                        </span>
                     </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <span class="title is-4">{{ page.title }}</span><br>
-                            <span class="subtitle is-6">
-                                <time datetime="{{ page.date }}">{{ dato::dato(dato=page.date) }}</time> − {{ page.extra.auxtoro }}
-                            </span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </nav>
-</section>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
 {% endblock %}

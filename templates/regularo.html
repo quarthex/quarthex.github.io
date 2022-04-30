@@ -7,7 +7,7 @@
     {% else %}
         {% set section = get_section(path=page.ancestors | last) %}
     {% endif %}
-    <nav class="block">
+    <nav class="container block">
         <ul class="columns is-mobile is-multiline">
             {% for page in section.pages %}
             <li class="column is-narrow">
@@ -16,8 +16,8 @@
             {% endfor %}
         </ul>
     </nav>
-    <article class="container content">
+    <div class="container content">
         {{ page.content | safe }}
-    </article>
+    </div>
 </section>
 {% endblock %}

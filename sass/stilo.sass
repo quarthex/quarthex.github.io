@@ -88,6 +88,9 @@ header
 
 h1,h2
     font-variant: small-caps
+hr
+    background: linear-gradient(to right, $green, $blue)
+    opacity: .8
 
 footer
     text-align: center
@@ -199,9 +202,6 @@ nav.ĉefpaĝo>ul>li
         background-color: transparentize(darken($danger, 50%), .5)
     &>div.kontrollisto
         background-color: transparentize(darken($info, 50%), .5)
-    &>hr
-        background: linear-gradient(to right, $green, $blue)
-        opacity: .8
     a
         color: mix($green, $blue)
         transition: text-shadow .2s $easing
@@ -218,3 +218,24 @@ nav.ĉefpaĝo>ul>li
         padding: 4px 8px
     x-btn,code
         font: .7em MinecraftiaEO
+
+.elŝuti>.content
+    &>.info
+        background: $box-background-color
+        border-radius: $radius
+        padding: $gap
+    &>ul
+        display: flex
+        justify-content: center
+        list-style: none
+        &>li
+            text-align: center
+            margin: 0 $gap
+            width: 300px
+            img
+                display: block
+                border-radius: $radius-large
+                margin-top: $gap
+                transition: box-shadow .2s $easing
+                &:hover
+                    box-shadow: $black-ter 0 2px 8px

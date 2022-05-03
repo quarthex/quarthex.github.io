@@ -167,8 +167,10 @@ nav.ĉefpaĝo>ul>li
     &>a.card
         display: block
         transition: all .2s $easing
+        filter: saturate(.5)
         &:hover
             box-shadow: $black-ter 0 4px 16px
+            filter: saturate(1)
 
 .novaĵo>.content
     text-align: justify
@@ -234,8 +236,16 @@ nav.ĉefpaĝo>ul>li
             width: 300px
             img
                 display: block
-                border-radius: $radius-large
                 margin-top: $gap
-                transition: box-shadow .2s $easing
+                transition: all .2s $easing
+                position: relative
+                top: 0
+                filter: saturate(.5)
                 &:hover
-                    box-shadow: $black-ter 0 2px 8px
+                    box-shadow: $black-ter 0 4px 8px
+                    top: -8px
+                    filter: saturate(1)
+            &>p
+                background: $box-background-color
+                border-radius: $radius-large
+                padding-top: $gap

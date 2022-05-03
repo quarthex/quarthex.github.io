@@ -8,9 +8,41 @@
 </section>
 <nav class="section ĉefpaĝo">
     <ul class="columns">
-        <li class="column"><a class="box" href="/ekludi">Kiel ekludi</a></li>
-        <li class="column"><a class="box" href="/elŝuti">Elŝuti mondmapon</a></li>
-        <li class="column"><a class="box" href="{{ config.extra.mapo }}">Vidi enretan mapon</a></li>
+        <li class="column">
+            <a class="card" href="/ekludi">
+                <div class="card-content">Kiel ekludi</div>
+                <div class="card-image">
+                    {% set image = resize_image(path="@/ekludi/tajpi-adreson.png", width=300, height=300, format="webp") %}
+                    <img src="{{ image.url }}" alt="Ekludi">
+                </div>
+            </a>
+        </li>
+        <li class="column">
+            <a class="card" href="/elŝuti">
+                <div class="card-content">Elŝuti mondmapon</div>
+                <div class="card-image">
+                    {% set image = resize_image(path="@/elŝuti.png", width=300, height=300, format="webp") %}
+                    <img src="{{ image.url }}" alt="Elŝuti">
+                </div>
+            </a>
+        </li>
+        <li class="column">
+            <a class="card" href="{{ config.extra.mapo }}">
+                <div class="card-content">Vidi enretan mapon</div>
+                <div class="card-image">
+                    {% set image = resize_image(path="@/mapo.png", width=300, height=300, format="webp") %}
+                    <img src="{{ image.url }}" alt="Mapo">
+                </div>
+            </a>
+        </li>
     </ul>
 </nav>
+<section class="section content container">
+    <h2>Pri nia servilo</h2>
+    <p>
+        Espera-Mondo.net estas paca Minecraft komunumo dediĉita sole de la uzo de Esperanto, la plej populara artefarita lingvo en la mondo.
+        Fondita antaŭ pli ol 5 jaroj, Espera-Mondo.net estas la plej maljuna kaj aktiva Minecraft servilo por Esperantistoj, havante dekojn da ludantoj ĉiu semajne.
+        Ni esperas ke vi provu la servilon, kaj ke vi trovu ĝin afabla kaj amuza loko por praktiki Esperanton.
+    </p>
+</section>
 {% endblock %}

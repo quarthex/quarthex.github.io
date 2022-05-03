@@ -159,8 +159,22 @@ section.ĉefpaĝo
             float: right
             margin: 0 0 $gap $gap
             width: 50%
-nav.ĉefpaĝo>ul>li
-    text-align: center
+nav.ĉefpaĝo>ul
+    justify-content: center
+    &>li
+        max-width: 300px
+        &>a
+            &>.card-content
+                text-align: center
+            &>.card-image>img
+                filter: saturate(.5)
+                position: relative
+                top: 0
+                transition: all .2s $easing
+                &:hover
+                    box-shadow: $black-ter 0 2px 8px
+                    filter: saturate(1)
+                    top: -2px
 
 .novaĵoj>ul>li
     max-width: 400px

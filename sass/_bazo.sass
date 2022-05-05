@@ -6,6 +6,9 @@ $telegram: #0c9ebf
 $retpoŝto: #ea4335
 $ligiloj: "discord" $discord, "twitter" $twitter, "telegram" $telegram, "at" $retpoŝto
 
+$sqrt3: 1.732 // libsass ne enhavas la matematikan biblioteko
+$heksagono-larĝo: 64px
+
 html
     background: url("pejzaĝo.webp") fixed
     height: 100%
@@ -45,51 +48,51 @@ footer
     font-size: $size-3
     .columns
         margin: $gap 0
-        li
-            min-width: 64px
-            max-width: 64px
-            height: 64px
-            margin: 0 $gap/2
-            padding: 0
-            position: relative
-            @include mobile
-                margin: 0 8px
-            i
-                position: absolute
-            %heksagono
-                content: " "
-                display: block
-                height: 37px
-                position: absolute
-                transition: all .2s $easing
-                width: 64px
-            i.heksagono
-                @extend %heksagono
-                top: 3px
-                &::before
-                    @extend %heksagono
-                    transform: rotate(60deg)
-                &::after
-                    @extend %heksagono
-                    transform: rotate(120deg)
-            i.heksagono.ombro, i.heksagono.ombro::before, i.heksagono.ombro::after
-                background-color: #222 !important
-                filter: blur(2px)
-            i.icon
-                left: 20px
-                top: 10px
-            &:hover
-                text-shadow: #444 0 0 8px
-                top: -2px
-                i.heksagono.ombro, i.heksagono.ombro::before, i.heksagono.ombro::after
-                    filter: blur(4px)
-                    top: 5px
-
+    .column
+        max-width: $heksagono-larĝo
+        margin: 0 $gap/2
+        padding: 0
+        @include mobile
+            margin: 0 8px
+    a
+        display: block
+        height: $heksagono-larĝo
+        position: relative
+        top: 0
+        transition: top .2s $easing
+        &:hover
+            top: -4px
+            .ombro
+                filter: blur(8px)
+    i
+        position: absolute
+    %heksagono
+        position: absolute
+        display: block
+        width: $heksagono-larĝo
+        height: round($heksagono-larĝo / $sqrt3)
+        content: " "
+    .heksagono
+        @extend %heksagono
+        &::before
+            @extend %heksagono
+            transform: rotate(60deg)
+        &::after
+            @extend %heksagono
+            transform: rotate(120deg)
+    .ombro
+        background: $black
+        filter: blur(2px)
+        transition: filter .2s $easing
+    .icon
+        left: round($heksagono-larĝo - 48px) / 2
+        top: round($heksagono-larĝo / $sqrt3 - 48px) / 2
 
     @each $name, $color in $ligiloj
-        li.#{$name}
-            i.heksagono, i.heksagono::before, i.heksagono::after
-                background-color: $color
-            &:hover
-                i.heksagono, i.heksagono::before, i.heksagono::after
-                    background-color: darken($color, 4)
+        a
+            .#{$name}
+                &, &::before, &::after
+                    background: $color
+            &:hover .#{$name}
+                &, &::before, &::after
+                    background: darken($color, 4)

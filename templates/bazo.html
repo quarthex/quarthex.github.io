@@ -45,11 +45,11 @@
         Espera-Mondo.net en aliaj platformoj:
         <ul class="columns is-mobile is-centered">
             {% for ligilo in config.extra.ligiloj %}
-            <li class="column {{ ligilo.icon | split(pat='/') | last }}">
+            <li class="column">
                 <a href="{{ ligilo.url }}">
                     <i class="heksagono ombro"></i>
-                    <i class="heksagono"></i>
-                    <i class="icon fa-{{ ligilo.icon | split(pat='/') | first }} fa-{{ ligilo.icon | split(pat='/' ) | last }}"
+                    <i class="heksagono {{ ligilo.icon | split(pat='/') | last }}"></i>
+                    <i class="icon is-large fa-{{ ligilo.icon | split(pat='/') | first }} fa-{{ ligilo.icon | split(pat='/' ) | last }}"
                         title="{{ ligilo.title }}"></i>
                 </a>
             </li>

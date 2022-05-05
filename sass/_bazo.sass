@@ -1,0 +1,95 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+
+$discord: #5865f2
+$twitter: #1d9bf0
+$telegram: #0c9ebf
+$retpoŝto: #ea4335
+$ligiloj: "discord" $discord, "twitter" $twitter, "telegram" $telegram, "at" $retpoŝto
+
+html
+    background: url("pejzaĝo.webp") fixed
+    height: 100%
+
+body
+    text-shadow: #222 0 0 2px
+
+.navbar
+    font-size: $size-4
+
+.navbar-brand
+    font-size: $size-2
+    white-space: nowrap
+    @include mobile
+        font-size: $size-3
+    &>img
+        margin-right: $gap/2
+        @include mobile
+            margin-right: $gap/3
+            max-height: 3rem
+
+.navbar-end
+    padding: 1rem 0
+
+.navbar-item.is-tab
+    border-bottom-width: 4px
+    @include touch
+        border-bottom-width: 0
+    @include desktop
+        margin: 0 2px
+    &.is-active
+        background: linear-gradient(to right, $green, $blue)
+        border-radius: $radius
+
+footer
+    text-align: center
+    font-size: $size-3
+    .columns
+        margin: $gap 0
+        li
+            min-width: 64px
+            max-width: 64px
+            height: 64px
+            margin: 0 $gap/2
+            padding: 0
+            position: relative
+            @include mobile
+                margin: 0 8px
+            i
+                position: absolute
+            %heksagono
+                content: " "
+                display: block
+                height: 37px
+                position: absolute
+                transition: all .2s $easing
+                width: 64px
+            i.heksagono
+                @extend %heksagono
+                top: 3px
+                &::before
+                    @extend %heksagono
+                    transform: rotate(60deg)
+                &::after
+                    @extend %heksagono
+                    transform: rotate(120deg)
+            i.heksagono.ombro, i.heksagono.ombro::before, i.heksagono.ombro::after
+                background-color: #222 !important
+                filter: blur(2px)
+            i.icon
+                left: 20px
+                top: 10px
+            &:hover
+                text-shadow: #444 0 0 8px
+                top: -2px
+                i.heksagono.ombro, i.heksagono.ombro::before, i.heksagono.ombro::after
+                    filter: blur(4px)
+                    top: 5px
+
+
+    @each $name, $color in $ligiloj
+        li.#{$name}
+            i.heksagono, i.heksagono::before, i.heksagono::after
+                background-color: $color
+            &:hover
+                i.heksagono, i.heksagono::before, i.heksagono::after
+                    background-color: darken($color, 4)

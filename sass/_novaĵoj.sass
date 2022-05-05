@@ -1,0 +1,21 @@
+.novaĵoj li
+    max-width: 400px
+    a
+        display: block
+        transition: all .2s $easing
+        filter: saturate(.5)
+        &:hover
+            box-shadow: $black-ter 0 4px 16px
+            filter: saturate(1)
+
+.novaĵo
+    text-align: justify
+    img
+        box-shadow: $black-ter 0 2px 8px
+        @include tablet
+            float: right
+            margin-left: $gap
+            max-width: 50%
+    .malsupra
+        text-align: right
+        margin: $gap

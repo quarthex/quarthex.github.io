@@ -1,11 +1,5 @@
 // tiparo
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap")
-@font-face
-    font-family: MinecraftiaEO
-    font-style: normal
-    font-weight: 500
-    src: url(MinecraftiaEO.ttf) format("truetype")
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
 
 // bulma
 @import "../vendor/bulma/sass/utilities/initial-variables.sass"
@@ -47,219 +41,17 @@ $navbar-tab-active-border-bottom-style: none
 @import "../vendor/bulma/sass/helpers/typography"
 @import "../vendor/bulma/sass/layout/footer"
 @import "../vendor/bulma/sass/layout/section"
-a.box
-    transition: box-shadow .2s $easing
-
-$discord: #5865f2
-$twitter: #1d9bf0
-$telegram: #0c9ebf
-$retpoŝto: #ea4335
-$ligiloj: "discord" $discord, "twitter" $twitter, "telegram" $telegram, "at" $retpoŝto
-
-html
-    background: url("pejzaĝo.webp") fixed
-    height: 100%
-    text-shadow: #222 0 0 2px
-
-header
-    nav.navbar
-        font-size: $size-4
-        .navbar-brand
-            font-size: $size-2
-            white-space: nowrap
-            @include mobile
-                font-size: $size-3
-        img
-            margin-right: $gap/2
-            @include mobile
-                margin-right: $gap/3
-                max-height: 3rem
-        .navbar-menu>.navbar-end
-            padding: 1rem 0
-            .navbar-item.is-tab
-                border-bottom-width: 4px
-                @include touch
-                    border-bottom-width: 0
-                @include desktop
-                    margin: 0 2px
-            .navbar-item.is-tab.is-active
-                background: linear-gradient(to right, $green, $blue)
-                border-radius: $radius
 
 h1,h2
     font-variant: small-caps
+
 hr
     background: linear-gradient(to right, $green, $blue)
     opacity: .8
 
-footer
-    text-align: center
-    font-size: $size-3
-    ul.columns
-        margin: $gap 0
-        li.column
-            min-width: 64px
-            max-width: 64px
-            height: 64px
-            margin: 0 $gap/2
-            padding: 0
-            position: relative
-            @include mobile
-                margin: 0 8px
-            a
-                i
-                    position: absolute
-                %heksagono
-                    content: " "
-                    display: block
-                    height: 37px
-                    position: absolute
-                    transition: all .2s $easing
-                    width: 64px
-                i.heksagono
-                    @extend %heksagono
-                    top: 3px
-                    &::before
-                        @extend %heksagono
-                        transform: rotate(60deg)
-                    &::after
-                        @extend %heksagono
-                        transform: rotate(120deg)
-                i.heksagono.ombro, i.heksagono.ombro::before, i.heksagono.ombro::after
-                    background-color: #222 !important
-                    filter: blur(2px)
-                i.icon
-                    left: 20px
-                    top: 10px
-            &:hover
-                text-shadow: #444 0 0 8px
-                top: -2px
-                a
-                    i.heksagono.ombro, i.heksagono.ombro::before, i.heksagono.ombro::after
-                        filter: blur(4px)
-                        top: 5px
-
-
-        @each $name, $color in $ligiloj
-            li.#{$name}>a
-                i.heksagono, i.heksagono::before, i.heksagono::after
-                    background-color: $color
-            li.#{$name}:hover>a
-                i.heksagono, i.heksagono::before, i.heksagono::after
-                    background-color: darken($color, 4)
-
-section.ĉefpaĝo
-    img
-        border-radius: $radius
-        box-shadow: #222 0 16px 32px
-        width: 100%
-        @include mobile
-            display: none
-        @include widescreen
-            float: right
-            margin: 0 0 $gap $gap
-            width: 50%
-nav.ĉefpaĝo>ul
-    justify-content: center
-    &>li
-        max-width: 300px
-        &>a
-            &>.card-content
-                text-align: center
-            &>.card-image>img
-                filter: saturate(.5)
-                position: relative
-                top: 0
-                transition: all .2s $easing
-                &:hover
-                    box-shadow: $black-ter 0 2px 8px
-                    filter: saturate(1)
-                    top: -2px
-
-.novaĵoj>ul>li
-    max-width: 400px
-    &>a.card
-        display: block
-        transition: all .2s $easing
-        filter: saturate(.5)
-        &:hover
-            box-shadow: $black-ter 0 4px 16px
-            filter: saturate(1)
-
-.novaĵo>.content
-    text-align: justify
-    img
-        box-shadow: $black-ter 0 2px 8px
-        @include tablet
-            float: right
-            margin-left: $gap
-            max-width: 50%
-    &>p.malsupra
-        text-align: right
-        margin: $gap
-
-.regularo>.content
-    text-align: justify
-    ol
-        background: $box-background-color
-        margin: 0
-        padding: 1em 1em 1em 2em
-        @include mobile
-            margin: 0 -1rem
-        @include desktop
-            margin: 0 2rem
-
-.ekludi>.content
-    &>div.grava-informo, &>div.kontrollisto
-        @extend %block
-        border-radius: $radius-large
-        padding: $gap
-    &>div.grava-informo
-        background-color: transparentize(darken($danger, 50%), .5)
-    &>div.kontrollisto
-        background-color: transparentize(darken($info, 50%), .5)
-    a
-        color: mix($green, $blue)
-        transition: text-shadow .2s $easing
-        &:hover
-            text-shadow: transparentize($white-ter, .8) 0 1px 4px
-    img
-        box-shadow: $black-ter 0 2px 8px
-        display: block
-        margin: auto
-    x-btn
-        background: transparentize($grey, .2)
-        border: outset 2pt $grey
-        border-radius: $radius
-        padding: 4px 8px
-    x-btn,code
-        font: .7em MinecraftiaEO
-
-.elŝuti>.content
-    &>.info
-        background: $box-background-color
-        border-radius: $radius
-        padding: $gap
-    &>ul
-        display: flex
-        justify-content: center
-        list-style: none
-        &>li
-            text-align: center
-            margin: 0 $gap
-            width: 300px
-            img
-                display: block
-                margin-top: $gap
-                transition: all .2s $easing
-                position: relative
-                top: 0
-                filter: saturate(.5)
-                &:hover
-                    box-shadow: $black-ter 0 4px 8px
-                    top: -8px
-                    filter: saturate(1)
-            &>p
-                background: $box-background-color
-                border-radius: $radius-large
-                padding-top: $gap
+@import bazo.sass
+@import ĉefpaĝo.sass
+@import novaĵoj.sass
+@import regularo.sass
+@import ekludi.sass
+@import elŝuti.sass

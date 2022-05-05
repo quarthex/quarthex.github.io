@@ -9,29 +9,41 @@
 <nav class="section ĉefpaĝo">
     <ul class="columns">
         <li class="column">
-            <a class="card" href="/ekludi">
-                <div class="card-content">Kiel ekludi</div>
-                <div class="card-image">
-                    {% set image = resize_image(path="@/ekludi/tajpi-adreson.png", width=300, height=300, format="webp") %}
-                    <img src="{{ image.url }}" alt="Ekludi">
+            <a href="/ekludi">
+                <div class="card">
+                    <div class="card-content">Kiel ekludi</div>
+                    <div class="card-image">
+                        <figure class="image">
+                            {% set image = resize_image(path="@/ekludi/tajpi-adreson.png", width=300, height=300, format="webp") %}
+                            <img src="{{ image.url }}" alt="Ekludi">
+                        </figure>
+                    </div>
                 </div>
             </a>
         </li>
         <li class="column">
-            <a class="card" href="/elŝuti">
-                <div class="card-content">Elŝuti mondmapon</div>
-                <div class="card-image">
-                    {% set image = resize_image(path="@/elŝuti.png", width=300, height=300, format="webp") %}
-                    <img src="{{ image.url }}" alt="Elŝuti">
+            <a href="/elŝuti">
+                <div class="card">
+                    <div class="card-content">Elŝuti mondmapon</div>
+                    <div class="card-image">
+                        <figure class="image">
+                            {% set image = resize_image(path="@/elŝuti.png", width=300, height=300, format="webp") %}
+                            <img src="{{ image.url }}" alt="Elŝuti">
+                        </figure>
+                    </div>
                 </div>
             </a>
         </li>
         <li class="column">
-            <a class="card" href="{{ config.extra.mapo }}">
-                <div class="card-content">Vidi enretan mapon</div>
-                <div class="card-image">
-                    {% set image = resize_image(path="@/mapo.png", width=300, height=300, format="webp") %}
-                    <img src="{{ image.url }}" alt="Mapo">
+            <a href="{{ config.extra.mapo }}">
+                <div class="card">
+                    <div class="card-content">Vidi enretan mapon</div>
+                    <div class="card-image">
+                        <figure class="image">
+                            {% set image = resize_image(path="@/mapo.png", width=300, height=300, format="webp") %}
+                            <img src="{{ image.url }}" alt="Mapo">
+                        </figure>
+                    </div>
                 </div>
             </a>
         </li>

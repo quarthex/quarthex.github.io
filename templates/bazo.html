@@ -33,7 +33,8 @@
                         href="/novaĵoj">Novaĵoj</a>
                     <a class="navbar-item is-tab{% if current_path is starting_with('/regularo/') %} is-active{% endif %}"
                         href="/regularo">Regularo</a>
-                    <a class="navbar-item is-tab" href="{{ config.extra.mapo }}">Mapo</a>
+                    <a class="navbar-item is-tab{% if current_path == '/mapo/' %} is-active{% endif %}"
+                        href="/mapo">Mapo</a>
                     <a class="navbar-item is-tab{% if current_path == '/ekludi/' %} is-active{% endif %}"
                         href="/ekludi">Ekludi</a>
                 </div>

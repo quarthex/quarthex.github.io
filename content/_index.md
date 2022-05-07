@@ -1,5 +1,10 @@
 +++
 title = "Bonvenon"
+extra.ligiloj = [
+    { href = "/ekludi", titlo = "Kiel ekludi",        bildo = "@/ekludi/tajpi-adreson.png" },
+    { href = "/elŝuti", titlo = "Elŝuti mondmapon",   bildo = "@/elŝuti.png" },
+    { href = "/mapo",   titlo = "Vidi enretan mapon", bildo = "@/mapo.png" }
+]
 +++
 
 ![Aperejo](/ekludi/aperejo.webp)

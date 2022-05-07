@@ -4,11 +4,12 @@
         max-width: 400px
         a
             display: block
-            transition: all .2s $easing
-            filter: saturate(.5)
-            &:hover
-                box-shadow: $black-ter 0 4px 16px
-                filter: saturate(1)
+            @media (hover: hover)
+                transition: all .2s $easing
+                filter: saturate(.5)
+                &:hover
+                    box-shadow: $black-ter 0 4px 16px
+                    filter: saturate(1)
 
 .novaĵo
     text-align: justify

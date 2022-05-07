@@ -16,15 +16,16 @@ nav.ĉefpaĝo
         max-width: 300px
     .card-content
         text-align: center
-    .card
-        position: relative
-        top: 0
-        transition: all .2s $easing
-        img
-            filter: saturate(.5)
-            transition: filter .2s $easing
-        &:hover
-            box-shadow: $black-ter 0 4px 16px
-            top: -2px
+    @media (hover: hover)
+        .card
+            position: relative
+            top: 0
+            transition: all .2s $easing
             img
-                filter: saturate(1)
+                filter: saturate(.5)
+                transition: filter .2s $easing
+            &:hover
+                box-shadow: $black-ter 0 4px 16px
+                top: -2px
+                img
+                    filter: saturate(1)

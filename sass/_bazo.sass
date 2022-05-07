@@ -28,17 +28,19 @@ body
     white-space: nowrap
     @include mobile
         font-size: $size-3
-    &>img
+    img
         margin-right: $gap/2
         @include mobile
             margin-right: $gap/3
             max-height: 3rem
+            width: 48px
 
 .navbar-end
     padding: 1rem 0
 
 .navbar-item.is-tab
     border-bottom-width: 4px
+    min-height: 0
     @include touch
         border-bottom-width: 0
     @include desktop

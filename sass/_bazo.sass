@@ -21,17 +21,18 @@ body
     display: flex
     flex-direction: column
     height: 100%
-    text-shadow: #222 0 0 2px
+    text-shadow: $text-invert 0 0 4px
 
 .navbar
     font-size: $size-4
+    text-align: center
 
 .navbar-brand
     font-size: $size-2
     font-weight: bold
     white-space: nowrap
     @include mobile
-        font-size: $size-3
+        font-size: $size-4
     img
         margin-right: $gap/2
         @include mobile
@@ -40,7 +41,7 @@ body
             width: 48px
 
 .navbar-end
-    padding: 1rem 0
+    padding: 1rem .5rem
 
 .navbar-item.is-tab
     border-bottom-width: 4px

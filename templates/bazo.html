@@ -13,7 +13,8 @@
     <link rel="preload" href="MADE Tommy Regular_PERSONAL USE.otf" as="font" type="opentype">
     <link rel="preload" href="MADE Tommy Bold_PERSONAL USE.otf" as="font" type="opentype">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" as="style">
-    <link rel="preload" href="/pejzaĝo.webp" as="image">
+    <link rel="preload" href="/hela.webp" as="image">
+    <link rel="preload" href="/malhela.webp" as="image">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/webfonts/fa-brands-400.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/webfonts/fa-solid-900.woff2"
@@ -45,6 +46,10 @@
                         href="/mapo">Mapo</a>
                     <a class="navbar-item is-tab{% if current_path == '/ekludi/' %} is-active{% endif %}"
                         href="/ekludi">Ekludi</a>
+                    <span class="navbar-item is-tab etoso">
+                        <a class="icon" href="#" id="hela"><i class="fa fa-sun"></i></a>
+                        <a class="icon" href="#" id="malhela"><i class="fa fa-moon"></i></a>
+                    </span>
                 </div>
             </div>
         </nav>
@@ -66,6 +71,7 @@
         </ul>
     </footer>
     <script src="/menuo.js"></script>
+    <script src="/etoso.js"></script>
 </body>
 
 </html>

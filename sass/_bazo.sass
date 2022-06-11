@@ -10,9 +10,12 @@ $sqrt3: 1.732 // libsass ne enhavas la matematikan biblioteko
 $heksagono-larĝo: 64px
 
 html
-    background: url("pejzaĝo.webp") fixed $black-ter
+    background: url("hela.webp") fixed $black-ter
     background-size: cover
     height: 100%
+
+html[data-etoso=malhela]
+    background-image: url("malhela.webp")
 
 body
     display: flex
@@ -49,6 +52,18 @@ body
     &.is-active
         background: linear-gradient(to right, $green, $blue)
         border-radius: $radius
+    &.etoso:hover
+        border-bottom-color: transparent
+
+#hela
+    color: $yellow
+    text-shadow: $yellow 0 0 8px
+#malhela
+    text-shadow: $white 0 0 8px
+html[data-etoso=hela] #malhela
+    display: none
+html[data-etoso=malhela] #hela
+    display: none
 
 footer
     text-align: center

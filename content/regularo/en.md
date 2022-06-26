@@ -6,7 +6,7 @@ lang = "en"
 
 # Server Rules
 
-_Espera-Mondo.net has very few rules: we trust our players to use common sense and good judgement, so the server will remain the peaceful little corner of Esperantujo that it always has been.
+_EsperaMondo has very few rules: we trust our players to use common sense and good judgement, so the server will remain the peaceful little corner of Esperantujo that it always has been.
 To help keep that peace, however, we have three basic rules that you must follow:_
 
 1.  **Use Esperanto as much as possible.**
@@ -25,5 +25,5 @@ To help keep that peace, however, we have three basic rules that you must follow
     If you do this accidentally, you will get a warning but no further punishment; however, if you break the rule again, it will result in a permanent ban.
     (Bans can be appealed by contacting the admin, see the links below.)
 
-<small>Disclaimer: Espera-Mondo.net is a privately operated server.
+<small>Disclaimer: EsperaMondo is a privately operated server.
 The adminstrator reserves the right to deny access to the server to anyone, for any reason, with no warning.</small>

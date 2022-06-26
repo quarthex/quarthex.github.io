@@ -1,3 +1,54 @@
+// tiparo
+@import made-tommy
+
+// bulma
+$green: #3cc600
+$blue: #009bd3
+$family-sans-serif: "MADE Tommy", sans-serif
+@import ../vendor/bulma/sass/utilities/initial-variables
+@import ../vendor/bulma/sass/utilities/derived-variables
+$body-font-size: 16pt
+$scheme-main: transparent
+$scheme-main-bis: transparent
+$code: $red
+$code-background: transparent
+$link: $text
+$link-hover: $text-strong
+// box
+$box-background-color: transparentize($text-invert, .5)
+$box-link-hover-shadow: $black-ter 0 2px 8px
+// card
+$card-content-background-color: $box-background-color
+$card-shadow: $box-link-hover-shadow
+$card-radius: .5rem
+// navbar
+$navbar-height: 5rem
+$navbar-item-img-max-height: 4rem
+$navbar-tab-hover-border-bottom-color: mix($green, $blue)
+$navbar-tab-active-border-bottom-style: none
+@import ../vendor/bulma/sass/utilities/_all
+@import ../vendor/bulma/sass/base/_all
+@import ../vendor/bulma/sass/components/card
+@import ../vendor/bulma/sass/components/navbar
+@import ../vendor/bulma/sass/elements/box
+@import ../vendor/bulma/sass/elements/container
+@import ../vendor/bulma/sass/elements/content
+@import ../vendor/bulma/sass/elements/icon
+@import ../vendor/bulma/sass/elements/image
+@import ../vendor/bulma/sass/elements/other
+@import ../vendor/bulma/sass/grid/columns
+@import ../vendor/bulma/sass/helpers/float
+@import ../vendor/bulma/sass/helpers/typography
+@import ../vendor/bulma/sass/layout/footer
+@import ../vendor/bulma/sass/layout/section
+
+h1,h2
+    font-variant: small-caps
+
+hr
+    background: linear-gradient(to right, $green, $blue)
+    opacity: .8
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
 
 $discord: #5865f2
@@ -10,24 +61,22 @@ $sqrt3: 1.732 // libsass ne enhavas la matematikan biblioteko
 $heksagono-larĝo: 64px
 
 html
-    background: url("hela.webp") fixed $black-ter
     background-size: cover
     height: 100%
-
-html[data-etoso=malhela]
-    background-image: url("malhela.webp")
 
 body
     display: flex
     flex-direction: column
     height: 100%
-    text-shadow: $text-invert 0 0 4px
 
 .navbar
     font-size: $size-4
     text-align: center
 
-.navbar-brand
+.navbar-brand>.navbar-item
+    color: #fff
+    &:hover
+        color: #fff
     font-size: $size-2
     font-weight: bold
     white-space: nowrap
@@ -45,14 +94,21 @@ body
 
 .navbar-item.is-tab
     border-bottom-width: 4px
+    color: $white-ter
+    font-weight: bold
     min-height: 0
+    text-shadow: #000 1px 1px 2px
     @include touch
         border-bottom-width: 0
     @include desktop
         margin: 0 2px
+    &:hover
+        color: $white
     &.is-active
+        color: $white-ter
         background: linear-gradient(to right, $green, $blue)
         border-radius: $radius
+        text-shadow: none
     &.etoso:hover
         border-bottom-color: transparent
 
@@ -61,10 +117,6 @@ body
     text-shadow: $yellow 0 0 8px
 #malhela
     text-shadow: $white 0 0 8px
-html[data-etoso=hela] #malhela
-    display: none
-html[data-etoso=malhela] #hela
-    display: none
 
 footer
     text-align: center
@@ -89,6 +141,7 @@ footer
             .ombro
                 filter: blur(8px)
     i
+        color: $white
         position: absolute
     .heksagono
         &, &::before, &::after
@@ -118,3 +171,10 @@ footer
             &:hover .#{$name}
                 &, &::before, &::after
                     background: darken($color, 4)
+
+@import ĉefpaĝo
+@import novaĵoj
+@import regularo
+@import mapo
+@import ekludi
+@import elŝuti

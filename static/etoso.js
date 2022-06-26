@@ -1,8 +1,9 @@
 (() => {
     function uzi_etoson(etoso) {
-        const html = document.querySelector('html')
-        html.dataset['etoso'] = etoso
+        const link = document.getElementById('etoso')
+        link.href = `/${etoso}.css`
         localStorage.setItem('etoso', etoso)
+
     }
     document.getElementById('hela').onclick = () => uzi_etoson('malhela')
     document.getElementById('malhela').onclick = () => uzi_etoson('hela')

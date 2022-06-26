@@ -6,7 +6,7 @@ lang = "fr"
 
 # Règles du Serveur
 
-_Espera-Mondo.net a très peu de règles: nous espérons que la plupart des joueurs feront preuve de bon sens, de sorte que le serveur restera le petit coin paisible d’Esperantujo qu’il a toujours été.
+_EsperaMondo a très peu de règles: nous espérons que la plupart des joueurs feront preuve de bon sens, de sorte que le serveur restera le petit coin paisible d’Esperantujo qu’il a toujours été.
 Cependant, pour maintenir cette paisibilité, nous avons établis quelques règles de base pour nos joueurs :_
 
 1.  **Utilisez autant que possible l’espéranto.**

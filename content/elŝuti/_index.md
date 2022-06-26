@@ -3,7 +3,7 @@ title = "Elŝuti mondmapon"
 template = "elŝuti.html"
 +++
 
-# Elŝuti Espera-Mondon por unu-ludanta reĝimo
+# Elŝuti EsperaMondon por unu-ludanta reĝimo
 
 <div class="info">
 

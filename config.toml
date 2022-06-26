@@ -1,6 +1,6 @@
 base_url = "https://espera-mondo.net"
-title = "Espera-Mondo.net"
-description = "Espera-Mondo.net - La plej granda Minecraft servilo sole por Esperantistoj"
+title = "EsperaMondo"
+description = "EsperaMondo - La plej granda Minecraft servilo sole por esperantistoj"
 default_language = "eo"
 compile_sass = true
 minify_html = true

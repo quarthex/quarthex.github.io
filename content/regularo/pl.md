@@ -6,7 +6,7 @@ lang = "pl"
 
 # Regulamin Serwera
 
-_Espera-Mondo.net ma bardzo niewiele zasad — ufamy, że większość graczy będzie kierować się zdrowym rozsądkiem, by serwer mógł dalej pozostać spokojnym zakątkiem społeczności języka esperanto.
+_EsperaMondo ma bardzo niewiele zasad — ufamy, że większość graczy będzie kierować się zdrowym rozsądkiem, by serwer mógł dalej pozostać spokojnym zakątkiem społeczności języka esperanto.
 Dla utrzymania ładu, naszych graczy obowiązują trzy podstawowe zasady:_
 
 1.  **Używaj esperanta jak najwięcej.**
@@ -21,7 +21,7 @@ Dla utrzymania ładu, naszych graczy obowiązują trzy podstawowe zasady:_
     Administrator serwera może łatwo naprawić takie szkody; niemniej jednak byłoby najlepiej, gdyby nigdy nie miały one miejsca.
     Używaj zdrowego rozsądku! Jeśli złamiesz którąś z zasad, grozi ci ban.
 3.  **Na serwer zapraszaj tylko innych esperantystów.**
-    Początkujący (_komencantoj_) są zawsze mile widziani na serwerze Espera-Mondo.net.
+    Początkujący (_komencantoj_) są zawsze mile widziani na serwerze EsperaMondo.
     Gracze, którzy nie znają języka esperanto i nie są zainteresowani jego nauką, nie są mile widziani i zostaną natychmiast zbanowani.
     _Nie zapraszaj takich graczy na serwer._
     Jeśli zrobisz to przypadkowo, otrzymasz upomnienie; jeśli jednak zrobisz to ponownie, otrzymasz permanentnego bana.

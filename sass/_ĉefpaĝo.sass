@@ -1,13 +1,23 @@
-section.ĉefpaĝo img
+@keyframes aperi
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+section.ĉefpaĝo em-karuselo
     border-radius: $radius
     box-shadow: #222 0 16px 32px
-    width: 100%
-    @include mobile
-        display: none
+    overflow: hidden
+    position: relative
     @include tablet
         float: right
         margin: 0 0 $gap $gap
         width: 50%
+    @include mobile
+        display: none
+    img:nth-child(2)
+        position: absolute
+        top: 0; left: 0
+        animation: aperi 1s $easing
 
 nav.ĉefpaĝo
     ul

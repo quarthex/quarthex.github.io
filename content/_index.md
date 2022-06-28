@@ -7,7 +7,15 @@ extra.ligiloj = [
 ]
 +++
 
-![Aperejo](/ekludi/aperejo.webp)
+<em-karuselo class="image is-16x9">
+    <em-bildo fonto="karuselo-0.svg"></em-bildo>
+    <em-bildo fonto="karuselo-1.webp"></em-bildo>
+    <em-bildo fonto="karuselo-2.webp"></em-bildo>
+    <em-bildo fonto="karuselo-3.webp"></em-bildo>
+    <em-bildo fonto="karuselo-4.webp"></em-bildo>
+    <em-bildo fonto="karuselo-5.webp"></em-bildo>
+    <em-bildo fonto="karuselo-6.webp"></em-bildo>
+</em-karuselo>
 
 # Bonvenon al EsperaMondo!
 

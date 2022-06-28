@@ -23,8 +23,11 @@ $card-shadow: $box-link-hover-shadow
 $card-radius: .5rem
 // navbar
 $navbar-height: 5rem
+$navbar-item-color: $white
+$navbar-item-hover-color: $white-bis
 $navbar-item-img-max-height: 4rem
 $navbar-tab-hover-border-bottom-color: mix($green, $blue)
+$navbar-tab-active-color: $white
 $navbar-tab-active-border-bottom-style: none
 @import ../vendor/bulma/sass/utilities/_all
 @import ../vendor/bulma/sass/base/_all
@@ -71,14 +74,11 @@ body
 
 .navbar
     font-size: $size-4
+    font-weight: bold
     text-align: center
 
 .navbar-brand>.navbar-item
-    color: #fff
-    &:hover
-        color: #fff
-    font-size: $size-2
-    font-weight: bold
+    font-size: $size-1
     white-space: nowrap
     @include mobile
         font-size: $size-4
@@ -94,18 +94,13 @@ body
 
 .navbar-item.is-tab
     border-bottom-width: 4px
-    color: $white-ter
-    font-weight: bold
     min-height: 0
     text-shadow: #000 1px 1px 2px
     @include touch
         border-bottom-width: 0
     @include desktop
         margin: 0 2px
-    &:hover
-        color: $white
     &.is-active
-        color: $white-ter
         background: linear-gradient(to right, $green, $blue)
         border-radius: $radius
         text-shadow: none

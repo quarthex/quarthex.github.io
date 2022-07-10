@@ -128,7 +128,7 @@ footer
         padding: 0
         @include mobile
             margin: 0 8px
-    a
+    ul a
         display: block
         height: $heksagono-larĝo
         position: relative
@@ -169,6 +169,9 @@ footer
             &:hover .#{$name}
                 &, &::before, &::after
                     background: darken($color, 4)
+    div:last-child
+        font-size: $size-6
+        line-height: 1
 
 @import ĉefpaĝo
 @import novaĵoj

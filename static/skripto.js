@@ -46,5 +46,5 @@
     karuselo.div.innerHTML = ''
     karuselo.div.appendChild(karuselo.img(karuselo.vico.shift()))
     karuselo.vico[0] = karuselo.img(karuselo.vico[0])
-    setInterval(karuselo.sekvi, 5000);
+    window.addEventListener('load', () => setInterval(karuselo.sekvi, 5000))
 })()

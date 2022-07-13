@@ -24,7 +24,7 @@
                 <a class="navbar-item" href="/">
                     <img src="/stelo.svg" alt="insigno" width="64" height="64"> {{ config.title }}
                 </a>
-                <a role="button" class="navbar-burger" data-target="menuo">
+                <a role="button" class="navbar-burger" aria-label="menuo" aria-expanded="false" data-target="menuo">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -42,8 +42,12 @@
                     <a class="navbar-item is-tab{% if current_path == '/ekludi/' %} is-active{% endif %}"
                         href="/ekludi">Ekludi</a>
                     <span class="navbar-item is-tab etoso">
-                        <a class="icon" href="#" id="hela"><i class="fa fa-sun"></i></a>
-                        <a class="icon" href="#" id="malhela"><i class="fa fa-moon"></i></a>
+                        <a href="#" class="button etoso" aria-label="ŝanĝi etoson">
+                            <span class="icon">
+                                <i class="hela fa fa-sun"></i>
+                                <i class="malhela fa fa-moon"></i>
+                            </span>
+                        </a>
                     </span>
                 </div>
             </div>

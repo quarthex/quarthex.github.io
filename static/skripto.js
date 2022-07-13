@@ -1,17 +1,16 @@
 (() => {
     // etoso
-    function uzi_etoson(etoso) {
+    function uzi_etoson(hela) {
         const link = document.getElementById('etoso')
-        link.href = `/${etoso}.css`
-        localStorage.setItem('etoso', etoso)
-
+        link.href = `/${hela?'':'mal'}hela.css`
+        localStorage.setItem('hela', !!hela)
     }
-    document.getElementById('hela').onclick = () => uzi_etoson('malhela')
-    document.getElementById('malhela').onclick = () => uzi_etoson('hela')
+    document.querySelector('.button.etoso')
+        .addEventListener('click', () => uzi_etoson(localStorage.getItem('hela') !== 'true'))
     const match = matchMedia('(prefers-color-scheme: dark)')
-    match.addEventListener('change', e => uzi_etoson(e.matches ? 'malhela' : 'hela'))
-    const etoso = localStorage.getItem('etoso')
-    uzi_etoson(etoso === 'malhela' || (etoso === null && match.matches) ? 'malhela' : 'hela')
+    match.addEventListener('change', e => uzi_etoson(!e.matches))
+    const hela = localStorage.getItem('hela') === 'true'
+    uzi_etoson(hela !== false && (hela !== null || !match.matches))
 
     // menuo
     const burger = document.querySelector('.navbar-burger')

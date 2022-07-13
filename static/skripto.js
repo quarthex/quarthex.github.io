@@ -29,6 +29,7 @@
             if (nodo.tagName === 'IMG') return nodo
             const img = document.createElement('img')
             img.src = nodo.getAttribute('fonto')
+            img.alt = nodo.getAttribute('priskribo')
             img.width = 1920
             img.height = 1080
             return img

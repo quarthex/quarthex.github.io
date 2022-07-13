@@ -8,13 +8,13 @@ extra.ligiloj = [
 +++
 
 <em-karuselo class="image is-16x9">
-    <em-bildo fonto="ĉefpaĝo/karuselo-0.svg"></em-bildo>
-    <em-bildo fonto="ĉefpaĝo/karuselo-1.webp"></em-bildo>
-    <em-bildo fonto="ĉefpaĝo/karuselo-2.webp"></em-bildo>
-    <em-bildo fonto="ĉefpaĝo/karuselo-3.webp"></em-bildo>
-    <em-bildo fonto="ĉefpaĝo/karuselo-4.webp"></em-bildo>
-    <em-bildo fonto="ĉefpaĝo/karuselo-5.webp"></em-bildo>
-    <em-bildo fonto="ĉefpaĝo/karuselo-6.webp"></em-bildo>
+    <em-bildo fonto="ĉefpaĝo/karuselo-0.svg" priskribo="EsperaMondo emblemo"></em-bildo>
+    <em-bildo fonto="ĉefpaĝo/karuselo-1.webp" priskribo="herba valo de supre"></em-bildo>
+    <em-bildo fonto="ĉefpaĝo/karuselo-2.webp" priskribo="giganta Duo el lano"></em-bildo>
+    <em-bildo fonto="ĉefpaĝo/karuselo-3.webp" priskribo="multkolora turo"></em-bildo>
+    <em-bildo fonto="ĉefpaĝo/karuselo-4.webp" priskribo="bulvardo de flagoj"></em-bildo>
+    <em-bildo fonto="ĉefpaĝo/karuselo-5.webp" priskribo="tri homoj kun armaĵoj"></em-bildo>
+    <em-bildo fonto="ĉefpaĝo/karuselo-6.webp" priskribo="aperejo"></em-bildo>
 </em-karuselo>
 
 # Bonvenon al EsperaMondo!

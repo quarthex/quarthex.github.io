@@ -2,7 +2,7 @@
     // etoso
     function uzi_etoson(hela) {
         const link = document.getElementById('etoso')
-        link.href = `/${hela?'':'mal'}hela.css`
+        link.href = `/${hela ? '' : 'mal'}hela.css`
         localStorage.setItem('hela', !!hela)
     }
     document.querySelector('.button.etoso')
@@ -24,14 +24,30 @@
     const karuselo = {
         div: document.querySelector('em-karuselo'),
         vico: [],
+        krei_fonto: (nodo, nomo, larĝo) => {
+            const srcset = nodo.getAttribute(`fonto-${nomo}`)
+            if (srcset) {
+                const fonto = document.createElement('source')
+                fonto.media = `(max-width:${larĝo}px)`
+                fonto.srcset = srcset
+                return fonto
+            }
+        },
         img: (nodo) => {
-            if (nodo.tagName === 'IMG') return nodo
+            if (nodo.tagName === 'PICTURE') return nodo
+            const picture = document.createElement('picture')
+            for (const fonto of [
+                karuselo.krei_fonto(nodo, 'tablet', 1023),
+                karuselo.krei_fonto(nodo, 'desktop', 1215),
+                karuselo.krei_fonto(nodo, 'widescreen', 1407),
+            ]) if (fonto) picture.appendChild(fonto)
             const img = document.createElement('img')
             img.src = nodo.getAttribute('fonto')
             img.alt = nodo.getAttribute('priskribo')
             img.width = 1920
             img.height = 1080
-            return img
+            picture.appendChild(img)
+            return picture
         },
         sekvi: () => {
             karuselo.div.appendChild(karuselo.img(karuselo.vico.shift()))

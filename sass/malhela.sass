@@ -4,7 +4,11 @@ $text-strong: #fff
 @import bazo
 
 html
-    background: url("malhela.webp") fixed $black-ter
+    background-color: $black-ter
+    @include mobile
+        background-image: url("malhela-mobile.webp")
+    @include tablet
+        background-image: url("malhela.webp")
 
 #hela
     display: none

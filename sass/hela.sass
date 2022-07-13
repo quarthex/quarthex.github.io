@@ -3,7 +3,11 @@ $text: #202020
 @import bazo
 
 html
-    background: url("hela.webp") fixed $grey-light
+    background-color: $grey-light
+    @include mobile
+        background-image: url("hela-mobile.webp")
+    @include tablet
+        background-image: url("hela.webp")
 
 #malhela
     display: none

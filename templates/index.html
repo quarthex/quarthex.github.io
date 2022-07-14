@@ -16,7 +16,7 @@
                     <div class="card-image">
                         <figure class="image">
                             {% set bildo = resize_image(path=ligilo.bildo, width=300, height=300, format="webp") %}
-                            <img src="{{ bildo.url }}" alt="Ekludi" width="300" height="300">
+                            <img src="{{ bildo.url }}" alt="{{ ligilo.titlo }}" width="300" height="300">
                         </figure>
                     </div>
                 </div>

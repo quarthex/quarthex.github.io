@@ -52,7 +52,10 @@ hr
     background: linear-gradient(to right, $green, $blue)
     opacity: .8
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+$fa-font-path: "tiparoj"
+@import ../vendor/Font-Awesome/scss/fontawesome
+@import ../vendor/Font-Awesome/scss/solid
+@import ../vendor/Font-Awesome/scss/brands
 
 $discord: #5865f2
 $twitter: #1d9bf0
@@ -162,6 +165,7 @@ footer
             filter: blur(2px)
             transition: filter .2s $easing
     .icon
+        --fa-display: inline-flex
         left: round($heksagono-larĝo - 48px) / 2
         top: round($heksagono-larĝo / $sqrt3 - 48px) / 2
 

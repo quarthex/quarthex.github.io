@@ -7,11 +7,11 @@ jobs:
       - name: elsxuti
         uses: actions/checkout@v2
         with:
-          submodules: yes
+          submodules: true
       - name: pretigi Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          extended: yes
+          extended: true
       - name: konstrui
         run: hugo -b https://${{ github.repository_owner }}.github.io
       - name: publikigi

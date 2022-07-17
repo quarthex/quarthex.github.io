@@ -14,7 +14,8 @@
             <div class="navbar-end">
                 {{ $p := . }}
                 {{ range .Site.Menus.cxefa }}
-                    <a class="navbar-item is-tab{{ if $p.IsMenuCurrent "cxefa" . }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                    {{ $a := or ($p.IsMenuCurrent "cxefa" .) ($p.HasMenuCurrent "cxefa" .) }}
+                    <a class="navbar-item is-tab{{ if $a }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
                 {{ end }}
                 <span class="navbar-item is-tab etoso">
                     <a href="#" class="button etoso" aria-label="ŝanĝi etoson">

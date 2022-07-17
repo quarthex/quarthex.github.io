@@ -1,0 +1,16 @@
+baseURL = "https://espera-mondo.net"
+defaultContentLanguage = "eo"
+title = "EsperaMondo"
+
+[markup.goldmark.renderer]
+    unsafe = true
+
+[params]
+    priskribo = "EsperaMondo - La plej granda Minecraft servilo sole por esperantistoj"
+    mapo = "http://espera-mondo.net:8123"
+    ligiloj = [
+        { title = "Discord",  icon = "brands/discord",  url = "https://discord.gg/9qW8ySY" },
+        { title = "Twitter",  icon = "brands/twitter",  url = "https://twitter.com/EsperaMondo" },
+        { title = "Telegram", icon = "brands/telegram", url = "https://web.telegram.org/#/im?p=s1082104313_9694451371433130050" },
+        { title = "Retpoŝto", icon = "solid/at",        url = "retposxto.esperamondo@gmail.com" },
+    ]

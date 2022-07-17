@@ -1,0 +1,7 @@
+{{ $md := . }}
+{{ with .Page.Resources.GetMatch .Destination }}
+    {{ $img := (.Resize "800x webp") }}
+    <img src="{{ $img.RelPermalink }}" alt="{{ $md.PlainText }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
+{{ else }}
+    <img src={{ .Destination }} alt="{{ .PlainText }}">
+{{ end }}

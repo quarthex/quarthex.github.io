@@ -1,0 +1,27 @@
+{{ define "enhavo" }}
+<nav class="section novaĵoj">
+    <ul class="columns">
+        {{ range .Pages }}
+        <li class="column">
+            <a class="card" href="{{ .RelPermalink }}">
+                <div class="card-image">
+                    <figure class="image is-4x3">
+                        {{ with index .Resources 0 }}
+                        <img src="{{ (.Fill "400x300").RelPermalink }}" alt="ilustro">
+                        {{ end }}
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <span class="title is-4">{{ .Title }}</span><br>
+                        <span class="subtitle is-6">
+                            <time datetime="{{ .Date }}">{{ .Date | time.Format "2-a de January 2006" }}</time> − {{ .Params.auxtoro }}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}

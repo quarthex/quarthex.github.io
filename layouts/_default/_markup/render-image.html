@@ -1,0 +1,15 @@
+{{ $alt := .PlainText }}
+{{ with resources.Get .Destination }}
+    {{ if eq .MediaType.SubType "svg" }}
+        <em-bildo fonto="{{ .RelPermalink }}" priskribo="{{ $alt }}"></em-bildo>
+    {{ else }}
+        {{ $tablet     := (.Resize "910x512").RelPermalink }}
+        {{ $desktop    := (.Resize "1081x608").RelPermalink }}
+        {{ $widescreen := (.Resize "1252x704").RelPermalink }}
+        <em-bildo fonto="{{ .RelPermalink }}"
+                fonto-tablet="{{ $tablet }}"
+                fonto-desktop="{{ $desktop }}"
+                fonto-widescreen="{{ $widescreen }}"
+                priskribo="{{ $alt }}"></em-bildo>
+    {{ end }}
+{{ end }}

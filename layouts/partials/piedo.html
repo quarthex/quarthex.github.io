@@ -1,0 +1,21 @@
+<footer class="footer">
+    <div>EsperaMondo en aliaj platformoj:</div>
+    <ul class="columns is-mobile is-centered">
+        {{ range $ligilo := .Site.Params.ligiloj }}
+        <li class="column">
+            <a href="{{ $ligilo.url }}">
+                <i class="heksagono ombro"></i>
+                {{ with split .icon "/" }}
+                    <i class="heksagono {{ index . 1 }}"></i>
+                    <i class="icon is-large fa-{{ index . 0 }} fa-{{ index . 1 }}" title="{{ $ligilo.title }}"></i>
+                {{ end }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    <div>
+        Servilo zorgata de <img src="/ver3ndo.png" alt="Ver3ndo" width="16" height="16"> Ver3ndo.<br>
+        Retejo desegnita de <img src="/jonizulo.png" alt="Jonizulo" width="16" height="16"> Jonizulo,
+        programita de <img src="/viglaporko.png" alt="ViglaPorko" width="16" height="16"> ViglaPorko.
+    </div>
+</footer>

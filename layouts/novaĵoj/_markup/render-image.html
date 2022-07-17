@@ -1,0 +1,21 @@
+{{ $alt := .PlainText }}
+{{ with .Page.Resources.Get .Destination }}
+    {{ $mobile     := (.Resize "720x webp").RelPermalink }}
+    {{ $tablet     := (.Resize "488x webp").RelPermalink }}
+    {{ $desktop    := (.Resize "480x webp").RelPermalink }}
+    {{ $widescreen := (.Resize "576x webp").RelPermalink }}
+    {{ $full       := (.Resize (printf "%dx%d webp" .Width .Height)).RelPermalink }}
+    <img srcset="{{ $mobile }} 720w,
+                 {{- $tablet }} 488w,
+                 {{- $desktop }} 480w,
+                 {{- $widescreen }} 576w,
+                 {{- $full }} {{ .Width }}w"
+         sizes="(max-width: 768px) 720px,{{/*
+            */}}(max-width: 1023px) 488px,{{/*
+            */}}(max-width: 1215px) 480px,{{/*
+            */}}(max-width: 1407px) 576px,{{/*
+            */}}{{ .Width }}px"
+         src="{{ $mobile }}"
+         alt="{{ $alt }}" 
+         width="{{ .Width }}" height="{{ .Height }}">
+{{ end }}

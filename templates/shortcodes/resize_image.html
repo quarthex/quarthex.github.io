@@ -1,8 +1,0 @@
-{% if height is undefined %}
-    {% set height = 0 %}
-{% endif %}
-{% if format is undefined %}
-    {% set format = "auto" %}
-{% endif %}
-{% set bildo = resize_image(path=path, width=width, height=height, op=op, format=format) %}
-<img src="{{ bildo.url }}" alt="{{ alt }}">

@@ -1,6 +1,5 @@
 +++
 title = "Nederlands"
-template = "regularo.html"
 lang = "nl"
 +++
 

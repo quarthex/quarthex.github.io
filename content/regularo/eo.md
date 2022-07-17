@@ -1,6 +1,5 @@
 +++
 title = "Esperanto"
-template = "regularo.html"
 lang = "eo"
 +++
 

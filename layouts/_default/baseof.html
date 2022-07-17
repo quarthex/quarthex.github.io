@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Ver3ndo">
+    <meta name="description" content="{{ .Site.Params.priskribo }}">
+    {{ hugo.Generator }}
+    <meta name="keyword" content="esperanto, minecraft">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ with resources.Get "hela.sass"
+        | resources.ExecuteAsTemplate "hela.sass" .
+        | resources.ToCSS (dict "outputStyle" "compressed") }}
+        <link rel="stylesheet" class="hela" href="{{ .RelPermalink }}" media="screen" disabled>
+    {{ end }}
+    {{ with resources.Get "malhela.sass"
+        | resources.ExecuteAsTemplate "malhela.sass" .
+        | resources.ToCSS (dict "outputStyle" "compressed") }}
+        <link rel="stylesheet" class="malhela" href="{{ .RelPermalink }}" media="screen" disabled>
+    {{ end }}
+    <link rel="preload" href="/tiparoj/MADE%20TOMMY%20Regular_PERSONAL%20USE.otf" as="font" type="font/otf"
+        crossorigin="anonymous">
+    <link rel="preload" href="/tiparoj/MADE%20TOMMY%20Medium_PERSONAL%20USE.otf" as="font" type="font/otf"
+        crossorigin="anonymous">
+    <link rel="preload" href="/tiparoj/MADE%20TOMMY%20Bold_PERSONAL%20USE.otf" as="font" type="font/otf"
+        crossorigin="anonymous">
+    <title>{{ .Site.Title }}{{ with .Title }} − {{ . }}{{ end }}</title>
+</head>
+
+<body>
+    {{ partial "kapo.html" . }}
+    {{ block "enhavo" . }}{{ end }}
+    {{ partial "piedo.html" . }}
+    {{ with resources.Match "js/*.js" | resources.Concat "skripto.js"
+        | js.Build (dict "minify" hugo.IsProduction)
+        | resources.Fingerprint }}
+        <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+    {{ end }}
+</body>
+
+</html>

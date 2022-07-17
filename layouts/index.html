@@ -1,0 +1,39 @@
+{{ define "enhavo" }}
+<section class="section ĉefpaĝo">
+    <div class="content is-clearfix">
+        {{ .Content | safeHTML }}
+    </div>
+</section>
+<nav class="section container ĉefpaĝo">
+    <ul class="columns">
+        {{ $resources := .Resources }}
+        {{ range .Params.ligiloj }}
+        <li class="column">
+            <a href="{{ .href }}">
+                <div class="card">
+                    <div class="card-content">{{ .titlo }}</div>
+                    <div class="card-image">
+                        <figure class="image">
+                            {{ $titlo := .titlo }}
+                            {{ with $resources.GetMatch .bildo }}
+                                {{ $bildo := .Fill "300x300 Center webp" }}
+                                <img src="{{ $bildo.RelPermalink }}" alt="{{ $titlo }}" width="300" height="300">
+                            {{ else }}
+                                {{ .bildo }} mankas
+                            {{ end }}
+                        </figure>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>
+
+{{ with .GetPage "/pri" }}
+    <section class="section content container">
+        {{ .Content }}
+    </section>
+{{ end }}
+
+{{ end }}

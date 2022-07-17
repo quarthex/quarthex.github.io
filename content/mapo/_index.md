@@ -1,4 +1,5 @@
 +++
 title = "Mapo"
-template = "mapo.html"
+[menu.cxefa]
+    weight = 4
 +++

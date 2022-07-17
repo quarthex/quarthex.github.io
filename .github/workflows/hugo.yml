@@ -1,0 +1,18 @@
+on: push
+name: Konstrui kaj publikigi la retejon
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: elsxuti
+        uses: actions/checkout@v2
+      - name: pretigi Hugo
+        uses: peaceiris/actions-hugo@v2
+      - name: konstrui
+        run: hugo -b https://${{ github.repository_owner }}.github.io
+      - name: publikigi
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/ĉefa'
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          publish_dir: public

@@ -1,0 +1,21 @@
+$text: #202020
+
+@import sass/bazo
+
+html
+    background-color: $grey-light
+    @include tablet
+        {{ $fonbildo := resources.Get "hela.webp" }}
+        background-image: url("{{ $fonbildo.RelPermalink }}")
+    @include mobile
+        {{ $fonbildo = $fonbildo.Resize "x768" }}
+        background-image: url("{{ $fonbildo.RelPermalink }}")
+
+.fa-moon
+    display: none
+
+.ekludi
+    .grava-informo
+        background-color: transparentize(lighten($danger, 25%), .5)
+    .kontrollisto
+        background-color: transparentize(lighten($info, 25%), .5)

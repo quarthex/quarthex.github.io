@@ -1,0 +1,11 @@
+{{ define "enhavo" }}
+<section class="section novaĵo">
+    <div class="container content">
+        <h1 class="title is-1">{{ .Title }}</h1>
+        {{ .Content | safeHTML }}
+        <p class="malsupra">
+            {{ time.Format ":date_full" .Date }} − {{ .Params.auxtoro }}
+        </p>
+    </div>
+</section>
+{{ end }}

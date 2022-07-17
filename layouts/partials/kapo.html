@@ -1,0 +1,30 @@
+<header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/stelo.svg" alt="insigno" width="64" height="64"> {{ .Site.Title }}
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menuo" aria-expanded="false" data-target="menuo">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div id="menuo" class="navbar-menu">
+            <div class="navbar-end">
+                {{ $p := . }}
+                {{ range .Site.Menus.cxefa }}
+                    <a class="navbar-item is-tab{{ if $p.IsMenuCurrent "cxefa" . }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                {{ end }}
+                <span class="navbar-item is-tab etoso">
+                    <a href="#" class="button etoso" aria-label="ŝanĝi etoson">
+                        <span class="icon">
+                            <i class="hela fa fa-sun"></i>
+                            <i class="malhela fa fa-moon"></i>
+                        </span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </nav>
+</header>

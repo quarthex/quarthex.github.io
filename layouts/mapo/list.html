@@ -1,0 +1,13 @@
+{{ define "enhavo" }}
+<div class="section mapo">
+    <figure class="image is-5by4">
+        <iframe class="has-ratio" src="{{ .Site.Params.mapo }}/?zoom=3" frameborder="0"></iframe>
+    </figure>
+    <a class="button" href="{{ .Site.Params.mapo }}/?zoom=3" target="_blank">
+        <span class="icon-text">
+            <span class="text">Malfermi en nova langeto</span>
+            <span class="icon fa-solid fa-maximize"></span>
+        </span>
+    </a>
+</div>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ define "enhavo" }}
+<section class="section regularo">
+    <nav class="container block">
+        <ul class="columns is-mobile is-multiline">
+            {{ range .Parent.Pages }}
+            <li class="column is-narrow">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+    <div class="container content">
+        {{ .Content | safeHTML }}
+    </div>
+</section>
+{{ end }}

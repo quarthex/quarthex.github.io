@@ -1,6 +1,5 @@
 +++
 title = "Elŝuti mondmapon"
-template = "elŝuti.html"
 +++
 
 # Elŝuti EsperaMondon por unu-ludanta reĝimo
@@ -32,8 +31,8 @@ _Pli detalaj instruoj aperos ĉi tie baldaŭ… kontrolu pli poste._
 
 - EsperaMondo I  
   (malnova mondo, 1.12.2)
-  [{{ resize_image(path="@/elŝuti/esperamondoI.png", width=300, op="fit_width", format="webp", alt="EsperaMondo I") }}](/EsperaMondo.zip)
+  [![EsperaMondo I](esperamondoI.png)](/EsperaMondo.zip)
 
 - EsperaMondo II  
   (nuna mondo, 1.15.2)
-  [{{ resize_image(path="@/elŝuti/esperamondoII.png", width=300, op="fit_width", format="webp", alt="EsperaMondo II") }}](/EsperaMondoII.zip)
+  [![EsperaMondo II](esperamondoII.png)](/EsperaMondoII.zip)

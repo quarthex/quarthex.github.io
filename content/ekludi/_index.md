@@ -1,6 +1,8 @@
 +++
+linktitle = "Ekludi"
 title = "Kiel ekludi en EsperaMondo"
-template = "ekludi.html"
+[menu.cxefa]
+    weight = 5
 +++
 
 # Kiel ekludi en EsperaMondo
@@ -41,21 +43,21 @@ Antaŭ ludi en EsperaMondo, bonvolu kontroli la sekvajn aferojn:
     Se vi ankoraŭ ne havas Minecraft, vi povas aĉeti ĝin [ĉi tie](https://www.minecraft.net/en-us/get-minecraft).
     <span class="is-uppercase">Certiĝu ke vi uzas la ĝustan version de Minecraft (1.16.5)!</span>
 
-    {{ resize_image(path="@/ekludi/malfermita-Minecraft.png", width=800, op="fit_width", format="webp", alt="Malfermita Minecraft") }}
+    ![Malfermitae Minecraft](malfermita-Minecraft.png)
 
 2.  Alklaku <x-btn>Aldoni servilon</x-btn>.
 
-    {{ resize_image(path="@/ekludi/aldoni-servilon.png", width=800, op="fit_width", format="webp", alt="Aldoni servilon") }}
+    ![Aldoni servilon](aldoni-servilon.png)
 
 3.  Tajpu la servilajn informojn en la tekstujoj, kaj aklaku <x-btn>Prete</x-btn>:  
     Servila nomo: `Espera Mondo`  
     Servila adreso: `espera-mondo.net`
 
-    {{ resize_image(path="@/ekludi/tajpi-adreson.png", width=800, op="fit_width", format="webp", alt="Servilajn informojn") }}
+    ![Servilajn informojn](tajpi-adreson.png)
 
 4.  Vi nun povas ekludi en EsperaMondo!
 
-    {{ resize_image(path="@/ekludi/preta.png", width=800, op="fit_width", format="webp", alt="Preta") }}
+    ![Preta](preta.png)
 
 ---
 

@@ -2,8 +2,7 @@
 title = "La Submonda Ĝisdatiĝo Finfine Alvenis!"
 date = 2020-06-25
 slug = "submonda-gxisdatigo"
-extra.auxtoro = "Ver3ndo"
-extra.bildo = "infero.jpeg"
+auxtoro = "Ver3ndo"
 +++
 
 ![Infero](infero.jpeg)

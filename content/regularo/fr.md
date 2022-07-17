@@ -1,6 +1,5 @@
 +++
 title = "Français"
-template = "regularo.html"
 lang = "fr"
 +++
 

@@ -138,11 +138,10 @@ footer
     ul a
         display: block
         height: $heksagono-larĝo
-        position: relative
-        top: 0
-        transition: top .2s $easing
+        transform: translate(0, 0px)
+        transition: transform .2s $easing
         &:hover
-            top: -4px
+            transform: translate(0, -4px)
             .ombro
                 filter: blur(8px)
     i

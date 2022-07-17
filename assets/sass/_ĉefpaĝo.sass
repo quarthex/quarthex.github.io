@@ -27,14 +27,13 @@ nav.ĉefpaĝo
         text-align: center
     @media (hover: hover)
         .card
-            position: relative
-            top: 0
+            transform: translate(0, 0px)
             transition: all .2s $easing
             img
                 filter: saturate(.5)
                 transition: filter .2s $easing
             &:hover
                 box-shadow: $black-ter 0 4px 16px
-                top: -2px
+                transform: translate(0, -2px)
                 img
                     filter: saturate(1)
